@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36401.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community9Cold_Bot_", "Community9Cold_Bot_\Community9Cold_Bot_.csproj", "{E0D431EB-BCA7-4864-BD0D-76BE6BE2CB33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0D431EB-BCA7-4864-BD0D-76BE6BE2CB33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D431EB-BCA7-4864-BD0D-76BE6BE2CB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D431EB-BCA7-4864-BD0D-76BE6BE2CB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D431EB-BCA7-4864-BD0D-76BE6BE2CB33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {238D3409-9C9D-4246-ACF9-6077390B73A7}
+	EndGlobalSection
+EndGlobal

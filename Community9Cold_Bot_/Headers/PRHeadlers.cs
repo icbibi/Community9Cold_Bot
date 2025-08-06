@@ -1,0 +1,85 @@
+﻿using PRTelegramBot.Attributes;
+
+namespace Community9Cold_Bot.Headers
+{
+    [InlineCommand]
+    internal enum PRHeadlers
+    {
+        Example = 100,
+        Example2,
+        Example3,
+        Example4,
+        ExampleEntry,
+        ExampleLurk,
+        ExampleSniper,
+        ExampleIGL,
+        ExampleSupport,
+        ExampleAddPlyaer,
+        Roule = 200,
+        RouleMM,
+        RouleBK,
+        RouleSplit,
+        RouleRash,
+        RouleFullZ,
+        RouleEco,
+        RouleFors,
+        RouleSaves,
+        RouleReg,
+        Profil = 300,
+        ProfilReg,
+        Commands,
+        ProfilRegSlash,
+
+        TELEGRAMNAME,
+        TELEGRAMID,
+        STANDOFFNAME,
+        STANDOFFID,
+        TELEGRAMUSERNAME,
+
+        ProfilPlz = 400,
+        DellProfil,
+        DellProfilYes,
+        DellProfilAddS,
+        DellProfilFinal,
+        AddProfilEsport,
+        AddProfilEsportYes,
+        RedactProfil,
+        RedactStandoffName,
+        RedactStandoffID,
+        RedactStandoffNameYes,
+        RedactStandoffIDYes = 411,
+
+        UpdateListBlack = 500,
+        UpdateListWhite,
+        UpdateListEsport,
+
+        CaseMain = 600,
+        CaseShop,
+        Fable,
+
+        Maps,
+        AvaMember,
+        AvaElder,
+        AvaCoLeader,
+        AvaLeader,
+        AvaRed,
+        AvaGreen,
+        AvaBlack,
+        AvaPink,
+        AvaOrange,
+        AvaBlue,
+        AvaBirch,
+        AvaPersonalize,
+        AddNews,
+        AddNewsYes,
+        AddMember,
+        AddElder,
+        AddCoLeader,
+        AddAvaO,
+        AddAvaOYes,
+        DellAvaO,
+        DellAvaOYes,
+        ProfilPlzPl
+
+    }
+}

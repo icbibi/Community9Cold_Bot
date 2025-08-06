@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "vj9qqG1S/oM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Виндовс\\Desktop\\Community9Cold_Bot_\\Community9Cold_Bot_\\Community9Cold_Bot_.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.7\\microsoft.extensions.configuration.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.7\\microsoft.extensions.configuration.abstractions.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\9.0.7\\microsoft.extensions.configuration.fileextensions.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.configuration.json\\9.0.7\\microsoft.extensions.configuration.json.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\9.0.7\\microsoft.extensions.fileproviders.abstractions.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\9.0.7\\microsoft.extensions.fileproviders.physical.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\9.0.7\\microsoft.extensions.filesystemglobbing.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\8.0.0\\microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.7\\microsoft.extensions.primitives.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\prtelegrambot\\0.7.9.4\\prtelegrambot.0.7.9.4.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\system.io.pipelines\\9.0.7\\system.io.pipelines.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\system.text.encodings.web\\9.0.7\\system.text.encodings.web.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\system.text.json\\9.0.7\\system.text.json.9.0.7.nupkg.sha512",
+    "C:\\Users\\Виндовс\\.nuget\\packages\\telegram.bot\\22.6.0\\telegram.bot.22.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
