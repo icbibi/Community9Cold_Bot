@@ -839,7 +839,7 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), "Word: " + wordS);
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Word: " + wordS);
             }
         }
 
@@ -849,7 +849,7 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), "Введите индекс сообщения");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Введите индекс сообщения");
             }
         }
 
@@ -859,7 +859,7 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), "AllMess: " + NameAll);
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "AllMesss:" + NameAll);
             }
         }
 
@@ -1005,7 +1005,7 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), "ffffffffff");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "ffffffffff5");
             }
         }
 
@@ -1015,7 +1015,7 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), $"Last enter TGN: {TelegramNameAdd}\n\rLast enter SON: {StandoffNameAdd}\n\rLast enter SID: {StandoffIDAdd}\n\rLast enter TID: {TelegramIDAdd}\n\r" +
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Last enter TGN: {TelegramNameAdd}\n\rLast enter SON: {StandoffNameAdd}\n\rLast enter SID: {StandoffIDAdd}\n\rLast enter TID: {TelegramIDAdd}\n\r" +
                     $"Last enter TUN: {TelegramUserNameAdd}\n\r\nExamination TGN: {TelegramNameProverca}\n\rExamination SON: {StandoffNameProverca}\n\rExamination SID: {StandoffIDProverca}\n\rExamination TID: {TelegramIDProverca}\n\r" +
                     $"Examination TUN: {TelegramUserNameProverca}\n\r\nLast enter AYio: \n\rLast enter AYil: \n\rLast enter ABlu: \n\rLast enter AOra: \n\rLast enter ARed: \n\r" +
                     $"Last enter ALG: \n\rLast enter ABG: \n\rLast enter APi: \n\rLast enter AWh: \n\rLast enter ABl: \n\r\nrExamination AYio: \n\r" +
@@ -1032,7 +1032,7 @@ namespace Community9Cold_Bot.Middlewares
             isAdmin = await botClient.GetBotDataOrNull().Options.AdminManager.HasUser(update.GetChatId());
             if (isAdmin)
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), $"Колличество всех пользователей: {Plz}");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Колличество всех пользователей: {Plz}");
             }
         }
         [ReplyMenuHandler("/AllMess")]
@@ -1042,7 +1042,7 @@ namespace Community9Cold_Bot.Middlewares
             isAdmin = await botClient.GetBotDataOrNull().Options.AdminManager.HasUser(update.GetChatId());
             if (isAdmin)
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), $"Колличество сообщений: {Mess} (+1)");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Колличество сообщений: {Mess} (+1)");
             }
         }
 
@@ -1053,7 +1053,7 @@ namespace Community9Cold_Bot.Middlewares
             isAdmin = await botClient.GetBotDataOrNull().Options.AdminManager.HasUser(update.GetChatId());
             if (isAdmin)
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), $"Все пользователи:\n\r\n{AllPlz}");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Все пользователи:\n\r\n{AllPlz}");
             }
         }
 
@@ -1087,8 +1087,7 @@ namespace Community9Cold_Bot.Middlewares
             if (isAdmin)
             {
                 News = null;
-
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), "Новости удалены.");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Новости удалены.");
             }
         }
 
@@ -1116,41 +1115,41 @@ namespace Community9Cold_Bot.Middlewares
             }
             else
             {
-                await botClient.SendTextMessageAsync(update.GetChatIdClass(), "Error 400");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Error bot (Ошибка бота)");
             }
         }
 
         [ReplyMenuHandler("/Balance")]
         public static async Task BalanceCommand(ITelegramBotClient botClient, Update update)
         {
-            await botClient.SendTextMessageAsync(update.GetChatIdClass(), "Баланс: 404");
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Error balance (Ошибка баланса)");
         }
 
         [ReplyMenuHandler("/News")]
         public static async Task NewsSlashPlz(ITelegramBotClient botClient, Update update)
         {
-            await botClient.SendTextMessageAsync(update.GetChatIdClass(), $"{News}");
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{News}");
         }
 
         [ReplyMenuHandler("/TelegramName")]
         public static async Task TelegramName(ITelegramBotClient botClient, Update update)
         {
             var msg = update.Message;
-            await botClient.SendTextMessageAsync(update.GetChatIdClass(), $"Ваш TelegramName: {msg?.Chat.FirstName}");
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Ваш TelegramName: {msg?.Chat.FirstName}");
         }
 
         [ReplyMenuHandler("/TelegramUserName")]
         public static async Task TelegramUserName(ITelegramBotClient botClient, Update update)
         {
             var msg = update.Message;
-            await botClient.SendTextMessageAsync(update.GetChatIdClass(), $"Ваш TelegramUserName: {msg?.Chat.Username}");
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Ваш TelegramUserName: {msg?.Chat.Username}");
         }
 
         [ReplyMenuHandler("/TelegramID")]
         public static async Task TelegramID(ITelegramBotClient botClient, Update update)
         {
             var msg = update.Message;
-            await botClient.SendTextMessageAsync(update.GetChatIdClass(), $"Ваш TelegramID: {msg?.Chat.Id}");
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Ваш TelegramID: {msg?.Chat.Id}");
         }
 
         [ReplyMenuHandler("/P", "Профиль", "Мой профиль", "профиль", "мой профиль", "/Profile", "/Plz")]
@@ -3813,19 +3812,19 @@ namespace Community9Cold_Bot.Middlewares
         [ReplyMenuHandler("/Esport", "Основной состав", "Основа", "Основа клана", "Основной состав клана", "/EsportList")]
         public static async Task Esport(ITelegramBotClient botClient, Update update)
         {
-            await botClient.SendTextMessageAsync(update.GetChatIdClass(), "Основной состав: \n\r\n" + AllPlzEsport);
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Основной состав: \n\r\n" + AllPlzEsport);
         }
 
         [ReplyMenuHandler("/BlackList", "Чёрный список", "BL", "чёрный список", "ЧС", "чс", "черный список", "чёрный список")]
         public static async Task Black(ITelegramBotClient botClient, Update update)
         {
-            await botClient.SendTextMessageAsync(update.GetChatIdClass(), "Чёрный список: \n\r\n" + AllPlzBlack);
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Чёрный список: \n\r\n" + AllPlzBlack);
         }
 
         [ReplyMenuHandler("/WhiteList", "Белый список", "WL", "белый список", "БС")]
         public static async Task White(ITelegramBotClient botClient, Update update)
         {
-            await botClient.SendTextMessageAsync(update.GetChatIdClass(), "Белый список: \n\r\n" + AllPlzWhite);
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Белый список: \n\r\n" + AllPlzWhite);
         }
 
         #endregion
@@ -5849,8 +5848,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram1}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram1}" +
                     $"\n\r TelegramUserName: {UserNameTelegram1}\n\r TelegramID: {IDTelegram1}\n\r\n " +
                     $"StandoffName: {NameStandoff1}\n\r StandoffID: {IDStandoff1}\n\r\n Баланс: {Balanc1}\n\r\n Аватарка: {ProfilAva1}", option);
                 }
@@ -5865,8 +5864,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram2}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram2}" +
                     $"\n\r TelegramUserName: {UserNameTelegram2}\n\r TelegramID: {IDTelegram2}\n\r\n " +
                     $"StandoffName: {NameStandoff2}\n\r StandoffID: {IDStandoff2}\n\r\n Баланс: {Balanc2}\n\r\n Аватарка: {ProfilAva2}", option);
                 }
@@ -5881,8 +5880,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram3}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram3}" +
                     $"\n\r TelegramUserName: {UserNameTelegram3}\n\r TelegramID: {IDTelegram3}\n\r\n " +
                     $"StandoffName: {NameStandoff3}\n\r StandoffID: {IDStandoff3}\n\r\n Баланс: {Balanc3}\n\r\n Аватарка: {ProfilAva3}", option);
                 }
@@ -5940,8 +5939,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram4}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram4}" +
                     $"\n\r TelegramUserName: {UserNameTelegram4}\n\r TelegramID: {IDTelegram4}\n\r\n " +
                     $"StandoffName: {NameStandoff4}\n\r StandoffID: {IDStandoff4}\n\r\n Баланс: {Balanc4}\n\r\n Аватарка: {ProfilAva4}", option);
                 }
@@ -5999,8 +5998,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram5}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram5}" +
                     $"\n\r TelegramUserName: {UserNameTelegram5}\n\r TelegramID: {IDTelegram5}\n\r\n " +
                     $"StandoffName: {NameStandoff5}\n\r StandoffID: {IDStandoff5}\n\r\n Баланс: {Balanc5}\n\r\n Аватарка: {ProfilAva5}", option);
                 }
@@ -6058,8 +6057,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram6}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram6}" +
                     $"\n\r TelegramUserName: {UserNameTelegram6}\n\r TelegramID: {IDTelegram6}\n\r\n " +
                     $"StandoffName: {NameStandoff6}\n\r StandoffID: {IDStandoff6}\n\r\n Баланс: {Balanc6}\n\r\n Аватарка: {ProfilAva6}", option);
                 }
@@ -6117,8 +6116,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram4}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram4}" +
                     $"\n\r TelegramUserName: {UserNameTelegram4}\n\r TelegramID: {IDTelegram4}\n\r\n " +
                     $"StandoffName: {NameStandoff4}\n\r StandoffID: {IDStandoff4}\n\r\n Баланс: {Balanc4}\n\r\n Аватарка: {ProfilAva4}", option);
                 }
@@ -6176,8 +6175,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram8}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram8}" +
                     $"\n\r TelegramUserName: {UserNameTelegram8}\n\r TelegramID: {IDTelegram8}\n\r\n " +
                     $"StandoffName: {NameStandoff8}\n\r StandoffID: {IDStandoff8}\n\r\n Баланс: {Balanc8}\n\r\n Аватарка: {ProfilAva8}", option);
                 }
@@ -6235,8 +6234,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram9}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram9}" +
                     $"\n\r TelegramUserName: {UserNameTelegram9}\n\r TelegramID: {IDTelegram9}\n\r\n " +
                     $"StandoffName: {NameStandoff9}\n\r StandoffID: {IDStandoff9}\n\r\n Баланс: {Balanc9}\n\r\n Аватарка: {ProfilAva9}", option);
                 }
@@ -6294,8 +6293,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram10}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram10}" +
                     $"\n\r TelegramUserName: {UserNameTelegram10}\n\r TelegramID: {IDTelegram10}\n\r\n " +
                     $"StandoffName: {NameStandoff10}\n\r StandoffID: {IDStandoff10}\n\r\n Баланс: {Balanc10}\n\r\n Аватарка: {ProfilAva10}", option);
                 }
@@ -6353,8 +6352,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram11}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram11}" +
                     $"\n\r TelegramUserName: {UserNameTelegram11}\n\r TelegramID: {IDTelegram11}\n\r\n " +
                     $"StandoffName: {NameStandoff11}\n\r StandoffID: {IDStandoff11}\n\r\n Баланс: {Balanc11}\n\r\n Аватарка: {ProfilAva11}", option);
                 }
@@ -6412,8 +6411,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram12}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram12}" +
                     $"\n\r TelegramUserName: {UserNameTelegram12}\n\r TelegramID: {IDTelegram12}\n\r\n " +
                     $"StandoffName: {NameStandoff12}\n\r StandoffID: {IDStandoff12}\n\r\n Баланс: {Balanc12}\n\r\n Аватарка: {ProfilAva12}", option);
                 }
@@ -6471,8 +6470,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram13}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram13}" +
                     $"\n\r TelegramUserName: {UserNameTelegram13}\n\r TelegramID: {IDTelegram13}\n\r\n " +
                     $"StandoffName: {NameStandoff13}\n\r StandoffID: {IDStandoff13}\n\r\n Баланс: {Balanc13}\n\r\n Аватарка: {ProfilAva13}", option);
                 }
@@ -6530,8 +6529,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram14}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram14}" +
                     $"\n\r TelegramUserName: {UserNameTelegram14}\n\r TelegramID: {IDTelegram14}\n\r\n " +
                     $"StandoffName: {NameStandoff14}\n\r StandoffID: {IDStandoff14}\n\r\n Баланс: {Balanc14}\n\r\n Аватарка: {ProfilAva14}", option);
                 }
@@ -6589,8 +6588,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram15}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram15}" +
                     $"\n\r TelegramUserName: {UserNameTelegram15}\n\r TelegramID: {IDTelegram15}\n\r\n " +
                     $"StandoffName: {NameStandoff15}\n\r StandoffID: {IDStandoff15}\n\r\n Баланс: {Balanc15}\n\r\n Аватарка: {ProfilAva15}", option);
                 }
@@ -6648,8 +6647,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram16}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram16}" +
                     $"\n\r TelegramUserName: {UserNameTelegram16}\n\r TelegramID: {IDTelegram16}\n\r\n " +
                     $"StandoffName: {NameStandoff16}\n\r StandoffID: {IDStandoff16}\n\r\n Баланс: {Balanc16}\n\r\n Аватарка: {ProfilAva16}", option);
                 }
@@ -6707,8 +6706,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram17}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram17}" +
                     $"\n\r TelegramUserName: {UserNameTelegram17}\n\r TelegramID: {IDTelegram17}\n\r\n " +
                     $"StandoffName: {NameStandoff17}\n\r StandoffID: {IDStandoff17}\n\r\n Баланс: {Balanc17}\n\r\n Аватарка: {ProfilAva17}", option);
                 }
@@ -6766,8 +6765,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram18}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram18}" +
                     $"\n\r TelegramUserName: {UserNameTelegram18}\n\r TelegramID: {IDTelegram18}\n\r\n " +
                     $"StandoffName: {NameStandoff18}\n\r StandoffID: {IDStandoff18}\n\r\n Баланс: {Balanc18}\n\r\n Аватарка: {ProfilAva18}", option);
                 }
@@ -6825,8 +6824,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram19}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram19}" +
                     $"\n\r TelegramUserName: {UserNameTelegram19}\n\r TelegramID: {IDTelegram19}\n\r\n " +
                     $"StandoffName: {NameStandoff19}\n\r StandoffID: {IDStandoff19}\n\r\n Баланс: {Balanc19}\n\r\n Аватарка: {ProfilAva19}", option);
                 }
@@ -6884,8 +6883,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram20}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram20}" +
                     $"\n\r TelegramUserName: {UserNameTelegram20}\n\r TelegramID: {IDTelegram20}\n\r\n " +
                     $"StandoffName: {NameStandoff20}\n\r StandoffID: {IDStandoff20}\n\r\n Баланс: {Balanc20}\n\r\n Аватарка: {ProfilAva20}", option);
                 }
@@ -6943,8 +6942,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram21}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram21}" +
                     $"\n\r TelegramUserName: {UserNameTelegram21}\n\r TelegramID: {IDTelegram21}\n\r\n " +
                     $"StandoffName: {NameStandoff21}\n\r StandoffID: {IDStandoff21}\n\r\n Баланс: {Balanc21}\n\r\n Аватарка: {ProfilAva21}", option);
                 }
@@ -7002,8 +7001,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram22}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram22}" +
                     $"\n\r TelegramUserName: {UserNameTelegram22}\n\r TelegramID: {IDTelegram22}\n\r\n " +
                     $"StandoffName: {NameStandoff22}\n\r StandoffID: {IDStandoff22}\n\r\n Баланс: {Balanc22}\n\r\n Аватарка: {ProfilAva22}", option);
                 }
@@ -7061,8 +7060,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram23}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram23}" +
                     $"\n\r TelegramUserName: {UserNameTelegram23}\n\r TelegramID: {IDTelegram23}\n\r\n " +
                     $"StandoffName: {NameStandoff23}\n\r StandoffID: {IDStandoff23}\n\r\n Баланс: {Balanc23}\n\r\n Аватарка: {ProfilAva23}", option);
                 }
@@ -7120,8 +7119,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram24}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram24}" +
                     $"\n\r TelegramUserName: {UserNameTelegram24}\n\r TelegramID: {IDTelegram24}\n\r\n " +
                     $"StandoffName: {NameStandoff24}\n\r StandoffID: {IDStandoff24}\n\r\n Баланс: {Balanc24}\n\r\n Аватарка: {ProfilAva24}", option);
                 }
@@ -7179,8 +7178,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram25}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram25}" +
                     $"\n\r TelegramUserName: {UserNameTelegram25}\n\r TelegramID: {IDTelegram25}\n\r\n " +
                     $"StandoffName: {NameStandoff25}\n\r StandoffID: {IDStandoff25}\n\r\n Баланс: {Balanc25}\n\r\n Аватарка: {ProfilAva25}", option);
                 }
@@ -7238,8 +7237,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram26}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram26}" +
                     $"\n\r TelegramUserName: {UserNameTelegram26}\n\r TelegramID: {IDTelegram26}\n\r\n " +
                     $"StandoffName: {NameStandoff26}\n\r StandoffID: {IDStandoff26}\n\r\n Баланс: {Balanc26}\n\r\n Аватарка: {ProfilAva26}", option);
                 }
@@ -7297,8 +7296,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram27}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram27}" +
                     $"\n\r TelegramUserName: {UserNameTelegram27}\n\r TelegramID: {IDTelegram27}\n\r\n " +
                     $"StandoffName: {NameStandoff27}\n\r StandoffID: {IDStandoff27}\n\r\n Баланс: {Balanc27}\n\r\n Аватарка: {ProfilAva27}", option);
                 }
@@ -7356,8 +7355,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram28}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram28}" +
                     $"\n\r TelegramUserName: {UserNameTelegram28}\n\r TelegramID: {IDTelegram28}\n\r\n " +
                     $"StandoffName: {NameStandoff28}\n\r StandoffID: {IDStandoff28}\n\r\n Баланс: {Balanc28}\n\r\n Аватарка: {ProfilAva28}", option);
                 }
@@ -7415,8 +7414,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram29}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram29}" +
                     $"\n\r TelegramUserName: {UserNameTelegram29}\n\r TelegramID: {IDTelegram29}\n\r\n " +
                     $"StandoffName: {NameStandoff29}\n\r StandoffID: {IDStandoff29}\n\r\n Баланс: {Balanc29}\n\r\n Аватарка: {ProfilAva29}", option);
                 }
@@ -7474,8 +7473,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram30}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram30}" +
                     $"\n\r TelegramUserName: {UserNameTelegram30}\n\r TelegramID: {IDTelegram30}\n\r\n " +
                     $"StandoffName: {NameStandoff30}\n\r StandoffID: {IDStandoff30}\n\r\n Баланс: {Balanc30}\n\r\n Аватарка: {ProfilAva30}", option);
                 }
@@ -7533,8 +7532,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram31}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram31}" +
                     $"\n\r TelegramUserName: {UserNameTelegram31}\n\r TelegramID: {IDTelegram31}\n\r\n " +
                     $"StandoffName: {NameStandoff31}\n\r StandoffID: {IDStandoff31}\n\r\n Баланс: {Balanc31}\n\r\n Аватарка: {ProfilAva31}", option);
                 }
@@ -7592,8 +7591,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram32}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram32}" +
                     $"\n\r TelegramUserName: {UserNameTelegram32}\n\r TelegramID: {IDTelegram32}\n\r\n " +
                     $"StandoffName: {NameStandoff32}\n\r StandoffID: {IDStandoff32}\n\r\n Баланс: {Balanc32}\n\r\n Аватарка: {ProfilAva32}", option);
                 }
@@ -7651,8 +7650,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram33}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram33}" +
                     $"\n\r TelegramUserName: {UserNameTelegram33}\n\r TelegramID: {IDTelegram33}\n\r\n " +
                     $"StandoffName: {NameStandoff33}\n\r StandoffID: {IDStandoff33}\n\r\n Баланс: {Balanc33}\n\r\n Аватарка: {ProfilAva33}", option);
                 }
@@ -7710,8 +7709,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram34}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram34}" +
                     $"\n\r TelegramUserName: {UserNameTelegram34}\n\r TelegramID: {IDTelegram34}\n\r\n " +
                     $"StandoffName: {NameStandoff34}\n\r StandoffID: {IDStandoff34}\n\r\n Баланс: {Balanc34}\n\r\n Аватарка: {ProfilAva34}", option);
                 }
@@ -7769,8 +7768,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram35}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram35}" +
                     $"\n\r TelegramUserName: {UserNameTelegram35}\n\r TelegramID: {IDTelegram35}\n\r\n " +
                     $"StandoffName: {NameStandoff35}\n\r StandoffID: {IDStandoff35}\n\r\n Баланс: {Balanc35}\n\r\n Аватарка: {ProfilAva35}", option);
                 }
@@ -7828,8 +7827,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram36}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram36}" +
                     $"\n\r TelegramUserName: {UserNameTelegram36}\n\r TelegramID: {IDTelegram36}\n\r\n " +
                     $"StandoffName: {NameStandoff36}\n\r StandoffID: {IDStandoff36}\n\r\n Баланс: {Balanc36}\n\r\n Аватарка: {ProfilAva36}", option);
                 }
@@ -7887,8 +7886,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram37}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram37}" +
                     $"\n\r TelegramUserName: {UserNameTelegram37}\n\r TelegramID: {IDTelegram37}\n\r\n " +
                     $"StandoffName: {NameStandoff37}\n\r StandoffID: {IDStandoff37}\n\r\n Баланс: {Balanc37}\n\r\n Аватарка: {ProfilAva37}", option);
                 }
@@ -7946,8 +7945,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram38}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram38}" +
                     $"\n\r TelegramUserName: {UserNameTelegram38}\n\r TelegramID: {IDTelegram38}\n\r\n " +
                     $"StandoffName: {NameStandoff38}\n\r StandoffID: {IDStandoff38}\n\r\n Баланс: {Balanc38}\n\r\n Аватарка: {ProfilAva38}", option);
                 }
@@ -8005,8 +8004,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram39}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram39}" +
                     $"\n\r TelegramUserName: {UserNameTelegram39}\n\r TelegramID: {IDTelegram39}\n\r\n " +
                     $"StandoffName: {NameStandoff39}\n\r StandoffID: {IDStandoff39}\n\r\n Баланс: {Balanc39}\n\r\n Аватарка: {ProfilAva39}", option);
                 }
@@ -8064,8 +8063,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram40}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram40}" +
                     $"\n\r TelegramUserName: {UserNameTelegram40}\n\r TelegramID: {IDTelegram40}\n\r\n " +
                     $"StandoffName: {NameStandoff40}\n\r StandoffID: {IDStandoff40}\n\r\n Баланс: {Balanc40}\n\r\n Аватарка: {ProfilAva40}", option);
                 }
@@ -8123,8 +8122,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram41}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram41}" +
                     $"\n\r TelegramUserName: {UserNameTelegram41}\n\r TelegramID: {IDTelegram41}\n\r\n " +
                     $"StandoffName: {NameStandoff41}\n\r StandoffID: {IDStandoff41}\n\r\n Баланс: {Balanc41}\n\r\n Аватарка: {ProfilAva41}", option);
                 }
@@ -8182,8 +8181,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram42}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram42}" +
                     $"\n\r TelegramUserName: {UserNameTelegram42}\n\r TelegramID: {IDTelegram42}\n\r\n " +
                     $"StandoffName: {NameStandoff42}\n\r StandoffID: {IDStandoff42}\n\r\n Баланс: {Balanc42}\n\r\n Аватарка: {ProfilAva42}", option);
                 }
@@ -8241,8 +8240,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram43}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram43}" +
                     $"\n\r TelegramUserName: {UserNameTelegram43}\n\r TelegramID: {IDTelegram43}\n\r\n " +
                     $"StandoffName: {NameStandoff43}\n\r StandoffID: {IDStandoff43}\n\r\n Баланс: {Balanc43}\n\r\n Аватарка: {ProfilAva43}", option);
                 }
@@ -8300,8 +8299,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram44}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram44}" +
                     $"\n\r TelegramUserName: {UserNameTelegram44}\n\r TelegramID: {IDTelegram44}\n\r\n " +
                     $"StandoffName: {NameStandoff44}\n\r StandoffID: {IDStandoff44}\n\r\n Баланс: {Balanc44}\n\r\n Аватарка: {ProfilAva44}", option);
                 }
@@ -8359,8 +8358,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram45}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram45}" +
                     $"\n\r TelegramUserName: {UserNameTelegram45}\n\r TelegramID: {IDTelegram45}\n\r\n " +
                     $"StandoffName: {NameStandoff45}\n\r StandoffID: {IDStandoff45}\n\r\n Баланс: {Balanc45}\n\r\n Аватарка: {ProfilAva45}", option);
                 }
@@ -8418,8 +8417,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram46}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram46}" +
                     $"\n\r TelegramUserName: {UserNameTelegram46}\n\r TelegramID: {IDTelegram46}\n\r\n " +
                     $"StandoffName: {NameStandoff46}\n\r StandoffID: {IDStandoff46}\n\r\n Баланс: {Balanc46}\n\r\n Аватарка: {ProfilAva46}", option);
                 }
@@ -8477,8 +8476,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram47}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram47}" +
                     $"\n\r TelegramUserName: {UserNameTelegram47}\n\r TelegramID: {IDTelegram47}\n\r\n " +
                     $"StandoffName: {NameStandoff47}\n\r StandoffID: {IDStandoff47}\n\r\n Баланс: {Balanc47}\n\r\n Аватарка: {ProfilAva47}", option);
                 }
@@ -8536,8 +8535,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram48}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram48}" +
                     $"\n\r TelegramUserName: {UserNameTelegram48}\n\r TelegramID: {IDTelegram48}\n\r\n " +
                     $"StandoffName: {NameStandoff48}\n\r StandoffID: {IDStandoff48}\n\r\n Баланс: {Balanc48}\n\r\n Аватарка: {ProfilAva48}", option);
                 }
@@ -8595,8 +8594,8 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram49}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram49}" +
                     $"\n\r TelegramUserName: {UserNameTelegram49}\n\r TelegramID: {IDTelegram49}\n\r\n " +
                     $"StandoffName: {NameStandoff49}\n\r StandoffID: {IDStandoff49}\n\r\n Баланс: {Balanc49}\n\r\n Аватарка: {ProfilAva49}", option);
                 }
@@ -8654,15 +8653,15 @@ namespace Community9Cold_Bot.Middlewares
                 }
                 else
                 {
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
-                    await PRTelegramBot.Helpers.Message.SendPhotoWithUrl(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram50}" +
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Error Ava (Ошибка аватарки)", option);
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), $"Ваш профиль:\n\r\n TelegramName: {NameTelegram50}" +
                     $"\n\r TelegramUserName: {UserNameTelegram50}\n\r TelegramID: {IDTelegram50}\n\r\n " +
                     $"StandoffName: {NameStandoff50}\n\r StandoffID: {IDStandoff50}\n\r\n Баланс: {Balanc50}\n\r\n Аватарка: {ProfilAva50}", option);
                 }
             }
             else
             {
-                await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), "Данные не найдены.");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update.GetChatId(), "Error entered data (Ошибка введенных данных)");
             }
         }
         #endregion
