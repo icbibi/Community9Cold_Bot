@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Community9Cold_Bot_")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df83d9b274ae40a06e397f5de7e6ec0cdd66e16b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c34d70957b9084a9f40fd207f321f790de6f2623")]
 [assembly: System.Reflection.AssemblyProductAttribute("Community9Cold_Bot_")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Community9Cold_Bot_")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

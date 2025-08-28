@@ -20,6 +20,8 @@ namespace Community9Cold_Bot.Middlewares
         static bool NewsProverca = false;
         static bool TelegramNameProverca = false;
         public static string? TelegramNameAdd;
+        static bool TelegramPlayYesProverca = false;
+        public static string? TelegramPlayYes;
         static bool StandoffNameProverca = false;
         public static string? StandoffNameAdd;
         static bool StandoffIDProverca = false;
@@ -59,6 +61,52 @@ namespace Community9Cold_Bot.Middlewares
         public static string? AddS;
         public static string? UserNameAdd;
         public static string? News;
+
+        #region Play
+
+        public static string? Play1 { get; set; } = "Игр не запланировано.";
+        public static string? Play2 { get; set; } = "Игр не запланировано.";
+        public static string? Play3 { get; set; } = "Игр не запланировано.";
+        public static string? Play4 { get; set; } = "Игр не запланировано.";
+        public static string? PlayAll => $"-------------------РАСПИСАНИЕ---------------------\n\r\nПЕРВАЯ:\n\r{Play1}\n\n\r\nВТОВАЯ:\n\r{Play2}\n\r\nТРЕТЬЯ:\n\r{Play3}\n\r\nЧЕТВЁРТАЯ:\n\r{Play4}";
+
+        public static string? Player1One { get; set; } = "Место не занято.";
+        public static string? Player2One { get; set; } = "Место не занято.";
+        public static string? Player3One { get; set; } = "Место не занято.";
+        public static string? Player4One { get; set; } = "Место не занято.";
+        public static string? Player5One { get; set; } = "Место не занято.";
+        public static string? Replacement1One { get; set; } = "Место не занято.";
+        public static string? Replacement2One { get; set; } = "Место не занято.";
+        public static string? PlayList1 => $"--------------------ИГРОКИ----------------------\n\r\n--------------------ПЕРВЫЙ----------------------\n\r{Player1One}\n\r--------------------ВТОРОЙ----------------------\n\r{Player2One}\n\r--------------------ТРЕТИЙ----------------------\n\r{Player3One}\n\r--------------------ЧЕТВЁРТЫЙ----------------------\n\r{Player4One}\n\r--------------------ПЯТЫЙ----------------------\n\r{Player5One}\n\r\n--------------------ЗАМЕНА----------------------\n\r\n--------------------ПЕРВЫЙ----------------------\n\r{Replacement1One}\n\r--------------------ВТОРОЙ----------------------\n\r{Replacement2One}";
+
+        public static string? Player1Two { get; set; } = "Место не занято.";
+        public static string? Player2Two { get; set; } = "Место не занято.";
+        public static string? Player3Two { get; set; } = "Место не занято.";
+        public static string? Player4Two { get; set; } = "Место не занято.";
+        public static string? Player5Two { get; set; } = "Место не занято.";
+        public static string? Replacement1Two { get; set; } = "Место не занято.";
+        public static string? Replacement2Two { get; set; } = "Место не занято.";
+        public static string? PlayList2 => $"--------------------ИГРОКИ----------------------\n\r\n--------------------ПЕРВЫЙ----------------------\n\r{Player1Two}\n\r--------------------ВТОРОЙ----------------------\n\r{Player2Two}\n\r--------------------ТРЕТИЙ----------------------\n\r{Player3Two}\n\r--------------------ЧЕТВЁРТЫЙ----------------------\n\r{Player4Two}\n\r--------------------ПЯТЫЙ----------------------\n\r{Player5Two}\n\r\n--------------------ЗАМЕНА----------------------\n\r\n--------------------ПЕРВЫЙ----------------------\n\r{Replacement1Two}\n\r--------------------ВТОРОЙ----------------------\n\r{Replacement2Two}";
+
+        public static string? Player1Three { get; set; } = "Место не занято.";
+        public static string? Player2Three { get; set; } = "Место не занято.";
+        public static string? Player3Three { get; set; } = "Место не занято.";
+        public static string? Player4Three { get; set; } = "Место не занято.";
+        public static string? Player5Three { get; set; } = "Место не занято.";
+        public static string? Replacement1Three { get; set; } = "Место не занято.";
+        public static string? Replacement2Three { get; set; } = "Место не занято.";
+        public static string? PlayList3 => $"--------------------ИГРОКИ----------------------\n\r\n--------------------ПЕРВЫЙ----------------------\n\r{Player1Three}\n\r--------------------ВТОРОЙ----------------------\n\r{Player2Three}\n\r--------------------ТРЕТИЙ----------------------\n\r{Player3Three}\n\r--------------------ЧЕТВЁРТЫЙ----------------------\n\r{Player4Three}\n\r--------------------ПЯТЫЙ----------------------\n\r{Player5Three}\n\r\n--------------------ЗАМЕНА----------------------\n\r\n--------------------ПЕРВЫЙ----------------------\n\r{Replacement1Three}\n\r--------------------ВТОРОЙ----------------------\n\r{Replacement2Three}";
+
+        public static string? Player1Four { get; set; } = "Место не занято.";
+        public static string? Player2Four { get; set; } = "Место не занято.";
+        public static string? Player3Four { get; set; } = "Место не занято.";
+        public static string? Player4Four { get; set; } = "Место не занято.";
+        public static string? Player5Four { get; set; } = "Место не занято.";
+        public static string? Replacement1Four { get; set; } = "Место не занято.";
+        public static string? Replacement2Four { get; set; } = "Место не занято.";
+        public static string? PlayList4 => $"--------------------ИГРОКИ----------------------\n\r\n--------------------ПЕРВЫЙ----------------------\n\r{Player1Four}\n\r--------------------ВТОРОЙ----------------------\n\r{Player2Four}\n\r--------------------ТРЕТИЙ----------------------\n\r{Player3Four}\n\r--------------------ЧЕТВЁРТЫЙ----------------------\n\r{Player4Four}\n\r--------------------ПЯТЫЙ----------------------\n\r{Player5Four}\n\r\n--------------------ЗАМЕНА----------------------\n\r\n--------------------ПЕРВЫЙ----------------------\n\r{Replacement1Four}\n\r--------------------ВТОРОЙ----------------------\n\r{Replacement2Four}";
+
+        #endregion
 
         #region Case
         #region Fable
@@ -182,11 +230,10 @@ namespace Community9Cold_Bot.Middlewares
         public static string? IDConverts4;
         #endregion
 
-
         #region ProfilUserName
-        public static string? UserNameTelegram1 = "@Slavaicebibi";
-        public static string? UserNameTelegram2 = "@МИША";
-        public static string? UserNameTelegram3 = "@GavTG01";
+        public static string? UserNameTelegram1 { get; set; } = "@Slavaicebibi";
+        public static string? UserNameTelegram2 { get; set; } = "@МИША";
+        public static string? UserNameTelegram3 { get; set; } = "@GavTG01";
         public static string? UserNameTelegram4;
         public static string? UserNameTelegram5;
         public static string? UserNameTelegram6;
@@ -237,9 +284,9 @@ namespace Community9Cold_Bot.Middlewares
         #endregion
 
         #region ProfilName
-        public static string? NameTelegram1 = "Savaa";
-        public static string? NameTelegram2 = "МИША";
-        public static string? NameTelegram3 = "Гав";
+        public static string? NameTelegram1 { get; set; } = "Savaa";
+        public static string? NameTelegram2 { get; set; } = "МИША";
+        public static string? NameTelegram3 { get; set; } = "Гав";
         public static string? NameTelegram4;
         public static string? NameTelegram5;
         public static string? NameTelegram6;
@@ -290,9 +337,9 @@ namespace Community9Cold_Bot.Middlewares
         #endregion
 
         #region ProfilID
-        public static string? IDTelegram1 = "5122938690";
-        public static string? IDTelegram2 = "1618573458";
-        public static string? IDTelegram3 = "7302403156";
+        public static string? IDTelegram1 { get; set; } = "5122938690";
+        public static string? IDTelegram2 { get; set; } = "1618573458";
+        public static string? IDTelegram3 { get; set; } = "7302403156";
         public static string? IDTelegram4;
         public static string? IDTelegram5;
         public static string? IDTelegram6;
@@ -343,9 +390,9 @@ namespace Community9Cold_Bot.Middlewares
         #endregion
 
         #region ProfilStandoffName
-        public static string? NameStandoff1 = "ice bibi";
-        public static string? NameStandoff2 = "Todash_Raketa";
-        public static string? NameStandoff3 = "апреле джек";
+        public static string? NameStandoff1 { get; set; } = "ice bibi";
+        public static string? NameStandoff2 { get; set; } = "Todash_Raketa";
+        public static string? NameStandoff3 { get; set; } = "апреле джек";
         public static string? NameStandoff4;
         public static string? NameStandoff5;
         public static string? NameStandoff6;
@@ -396,9 +443,9 @@ namespace Community9Cold_Bot.Middlewares
         #endregion
 
         #region ProfilStandoffID
-        public static string? IDStandoff1 = "57613305";
-        public static string? IDStandoff2 = "33535323";
-        public static string? IDStandoff3 = "20533162";
+        public static string? IDStandoff1 { get; set; } = "57613305";
+        public static string? IDStandoff2 { get; set; } = "33535323";
+        public static string? IDStandoff3 { get; set; } = "20533162";
         public static string? IDStandoff4;
         public static string? IDStandoff5;
         public static string? IDStandoff6;
@@ -449,56 +496,56 @@ namespace Community9Cold_Bot.Middlewares
         #endregion
 
         #region ProfilAva
-        public static string? ProfilAva1 = "Берёзовая";
-        public static string? ProfilAva2 = "Чёрная";
-        public static string? ProfilAva3 = "Именная";
-        public static string? ProfilAva4 = "Member";
-        public static string? ProfilAva5 = "Member";
-        public static string? ProfilAva6 = "Member";
-        public static string? ProfilAva7 = "Member";
-        public static string? ProfilAva8 = "Member";
-        public static string? ProfilAva9 = "Member";
-        public static string? ProfilAva10 = "Member";
-        public static string? ProfilAva11 = "Member";
-        public static string? ProfilAva12 = "Member";
-        public static string? ProfilAva13 = "Member";
-        public static string? ProfilAva14 = "Member";
-        public static string? ProfilAva15 = "Member";
-        public static string? ProfilAva16 = "Member";
-        public static string? ProfilAva17 = "Member";
-        public static string? ProfilAva18 = "Member";
-        public static string? ProfilAva19 = "Member";
-        public static string? ProfilAva20 = "Member";
-        public static string? ProfilAva21 = "Member";
-        public static string? ProfilAva22 = "Member";
-        public static string? ProfilAva23 = "Member";
-        public static string? ProfilAva24 = "Member";
-        public static string? ProfilAva25 = "Member";
-        public static string? ProfilAva26 = "Member";
-        public static string? ProfilAva27 = "Member";
-        public static string? ProfilAva28 = "Member";
-        public static string? ProfilAva29 = "Member";
-        public static string? ProfilAva30 = "Member";
-        public static string? ProfilAva31 = "Member";
-        public static string? ProfilAva32 = "Member";
-        public static string? ProfilAva33 = "Member";
-        public static string? ProfilAva34 = "Member";
-        public static string? ProfilAva35 = "Member";
-        public static string? ProfilAva36 = "Member";
-        public static string? ProfilAva37 = "Member";
-        public static string? ProfilAva38 = "Member";
-        public static string? ProfilAva39 = "Member";
-        public static string? ProfilAva40 = "Member";
-        public static string? ProfilAva41 = "Member";
-        public static string? ProfilAva42 = "Member";
-        public static string? ProfilAva43 = "Member";
-        public static string? ProfilAva44 = "Member";
-        public static string? ProfilAva45 = "Member";
-        public static string? ProfilAva46 = "Member";
-        public static string? ProfilAva47 = "Member";
-        public static string? ProfilAva48 = "Member";
-        public static string? ProfilAva49 = "Member";
-        public static string? ProfilAva50 = "Member";
+        public static string? ProfilAva1 { get; set; } = "Берёзовая";
+        public static string? ProfilAva2 { get; set; } = "Чёрная";
+        public static string? ProfilAva3 { get; set; } = "Именная";
+        public static string? ProfilAva4 { get; set; } = "Member";
+        public static string? ProfilAva5 { get; set; } = "Member";
+        public static string? ProfilAva6 { get; set; } = "Member";
+        public static string? ProfilAva7 { get; set; } = "Member";
+        public static string? ProfilAva8 { get; set; } = "Member";
+        public static string? ProfilAva9 { get; set; } = "Member";
+        public static string? ProfilAva10 { get; set; } = "Member";
+        public static string? ProfilAva11 { get; set; } = "Member";
+        public static string? ProfilAva12 { get; set; } = "Member";
+        public static string? ProfilAva13 { get; set; } = "Member";
+        public static string? ProfilAva14 { get; set; } = "Member";
+        public static string? ProfilAva15 { get; set; } = "Member";
+        public static string? ProfilAva16 { get; set; } = "Member";
+        public static string? ProfilAva17 { get; set; } = "Member";
+        public static string? ProfilAva18 { get; set; } = "Member";
+        public static string? ProfilAva19 { get; set; } = "Member";
+        public static string? ProfilAva20 { get; set; } = "Member";
+        public static string? ProfilAva21 { get; set; } = "Member";
+        public static string? ProfilAva22 { get; set; } = "Member";
+        public static string? ProfilAva23 { get; set; } = "Member";
+        public static string? ProfilAva24 { get; set; } = "Member";
+        public static string? ProfilAva25 { get; set; } = "Member";
+        public static string? ProfilAva26 { get; set; } = "Member";
+        public static string? ProfilAva27 { get; set; } = "Member";
+        public static string? ProfilAva28 { get; set; } = "Member";
+        public static string? ProfilAva29 { get; set; } = "Member";
+        public static string? ProfilAva30 { get; set; } = "Member";
+        public static string? ProfilAva31 { get; set; } = "Member";
+        public static string? ProfilAva32 { get; set; } = "Member";
+        public static string? ProfilAva33 { get; set; } = "Member";
+        public static string? ProfilAva34 { get; set; } = "Member";
+        public static string? ProfilAva35 { get; set; } = "Member";
+        public static string? ProfilAva36 { get; set; } = "Member";
+        public static string? ProfilAva37 { get; set; } = "Member";
+        public static string? ProfilAva38 { get; set; } = "Member";
+        public static string? ProfilAva39 { get; set; } = "Member";
+        public static string? ProfilAva40 { get; set; } = "Member";
+        public static string? ProfilAva41 { get; set; } = "Member";
+        public static string? ProfilAva42 { get; set; } = "Member";
+        public static string? ProfilAva43 { get; set; } = "Member";
+        public static string? ProfilAva44 { get; set; } = "Member";
+        public static string? ProfilAva45 { get; set; } = "Member";
+        public static string? ProfilAva46 { get; set; } = "Member";
+        public static string? ProfilAva47 { get; set; } = "Member";
+        public static string? ProfilAva48 { get; set; } = "Member";
+        public static string? ProfilAva49 { get; set; } = "Member";
+        public static string? ProfilAva50 { get; set; } = "Member";
         #endregion
 
         public override async Task InvokeOnPreUpdateAsync(ITelegramBotClient botClient, Update update, Func<Task> next)
@@ -541,6 +588,10 @@ namespace Community9Cold_Bot.Middlewares
             if (msg?.Text != null && TelegramUserNameProverca == true)
             {
                 TelegramUserNameAdd = msg?.Text;
+            }
+            if (msg?.Text != null && TelegramPlayYesProverca == true)
+            {
+                TelegramPlayYes = msg?.Text;
             }
             #endregion
             #region LastNews
@@ -833,8 +884,484 @@ namespace Community9Cold_Bot.Middlewares
 
         #region Slash Owner
 
-        [ReplyMenuHandler("/wordS")]
+        #region DellPlayer
+        [ReplyMenuHandler("/DellPleyer")]
         public static async Task words(ITelegramBotClient botClient, Update update)
+        {
+            var msg = update.Message;
+            if (msg?.Chat.Id == 5122938690)
+            {
+                Console.WriteLine("Удаление игрока из списка владельцем.");
+                var DellPlayer1One = new InlineCallback("1 (One)", PRHeadlers.DellPlayer1One);
+                var DellPlayer2One = new InlineCallback("2 (One)", PRHeadlers.DellPlayer2One);
+                var DellPlayer3One = new InlineCallback("3 (One)", PRHeadlers.DellPlayer3One);
+                var DellPlayer4One = new InlineCallback("4 (One)", PRHeadlers.DellPlayer4One);
+                var DellPlayer5One = new InlineCallback("5 (One)", PRHeadlers.DellPlayer5One);
+                var DellReplacement1One = new InlineCallback("1R (One)", PRHeadlers.DellReplacement1One);
+                var DellReplacement2One = new InlineCallback("2R (One)", PRHeadlers.DellReplacement2One);
+                var list1 = new List<IInlineContent>();
+                list1.Add(DellPlayer1One);
+                list1.Add(DellPlayer2One);
+                list1.Add(DellPlayer3One);
+                list1.Add(DellPlayer4One);
+                list1.Add(DellPlayer5One);
+                list1.Add(DellReplacement1One);
+                list1.Add(DellReplacement2One);
+                var menu1 = MenuGenerator.InlineKeyboard(2, list1);
+                var List1 = new OptionMessage();
+                List1.MenuInlineKeyboardMarkup = menu1;
+
+                var DellPlayer1Two = new InlineCallback("1 (Two)", PRHeadlers.DellPlayer1Two);
+                var DellPlayer2Two = new InlineCallback("2 (Two)", PRHeadlers.DellPlayer2Two);
+                var DellPlayer3Two = new InlineCallback("3 (Two)", PRHeadlers.DellPlayer3Two);
+                var DellPlayer4Two = new InlineCallback("4 (Two)", PRHeadlers.DellPlayer4Two);
+                var DellPlayer5Two = new InlineCallback("5 (Two)", PRHeadlers.DellPlayer5Two);
+                var DellReplacement1Two = new InlineCallback("1R (Two)", PRHeadlers.DellReplacement1Two);
+                var DellReplacement2Two = new InlineCallback("2R (Two)", PRHeadlers.DellReplacement2Two);
+                var list2 = new List<IInlineContent>();
+                list2.Add(DellPlayer1Two);
+                list2.Add(DellPlayer2Two);
+                list2.Add(DellPlayer3Two);
+                list2.Add(DellPlayer4Two);
+                list2.Add(DellPlayer5Two);
+                list2.Add(DellReplacement1Two);
+                list2.Add(DellReplacement2Two);
+                var menu2 = MenuGenerator.InlineKeyboard(2, list2);
+                var List2 = new OptionMessage();
+                List2.MenuInlineKeyboardMarkup = menu2;
+
+                var DellPlayer1Three = new InlineCallback("1 (Three)", PRHeadlers.DellPlayer1Three);
+                var DellPlayer2Three = new InlineCallback("2 (Three)", PRHeadlers.DellPlayer2Three);
+                var DellPlayer3Three = new InlineCallback("3 (Three)", PRHeadlers.DellPlayer3Three);
+                var DellPlayer4Three = new InlineCallback("4 (Three)", PRHeadlers.DellPlayer4Three);
+                var DellPlayer5Three = new InlineCallback("5 (Three)", PRHeadlers.DellPlayer5Three);
+                var DellReplacement1Three = new InlineCallback("1R (Three)", PRHeadlers.DellReplacement1Three);
+                var DellReplacement2Three = new InlineCallback("2R (Three)", PRHeadlers.DellReplacement2Three);
+                var list3 = new List<IInlineContent>();
+                list3.Add(DellPlayer1Three);
+                list3.Add(DellPlayer2Three);
+                list3.Add(DellPlayer3Three);
+                list3.Add(DellPlayer4Three);
+                list3.Add(DellPlayer5Three);
+                list3.Add(DellReplacement1Three);
+                list3.Add(DellReplacement2Three);
+                var menu3 = MenuGenerator.InlineKeyboard(2, list3);
+                var List3 = new OptionMessage();
+                List3.MenuInlineKeyboardMarkup = menu3;
+
+                var DellPlayer1Four = new InlineCallback("1 (Four)", PRHeadlers.DellPlayer1Four);
+                var DellPlayer2Four = new InlineCallback("2 (Four)", PRHeadlers.DellPlayer2Four);
+                var DellPlayer3Four = new InlineCallback("3 (Four)", PRHeadlers.DellPlayer3Four);
+                var DellPlayer4Four = new InlineCallback("4 (Four)", PRHeadlers.DellPlayer4Four);
+                var DellPlayer5Four = new InlineCallback("5 (Four)", PRHeadlers.DellPlayer5Four);
+                var DellReplacement1Four = new InlineCallback("1R (Four)", PRHeadlers.DellReplacement1Four);
+                var DellReplacement2Four = new InlineCallback("2R (Four)", PRHeadlers.DellReplacement2Four);
+                var list4 = new List<IInlineContent>();
+                list4.Add(DellPlayer1Four);
+                list4.Add(DellPlayer2Four);
+                list4.Add(DellPlayer3Four);
+                list4.Add(DellPlayer4Four);
+                list4.Add(DellPlayer5Four);
+                list4.Add(DellReplacement1Four);
+                list4.Add(DellReplacement2Four);
+                var menu4 = MenuGenerator.InlineKeyboard(2, list4);
+                var List4 = new OptionMessage();
+                List4.MenuInlineKeyboardMarkup = menu4;
+
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList1}", List1);
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList2}", List2);
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList3}", List3);
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList4}", List4);
+            }
+        }
+
+        #region One
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer1One)]
+        public static async Task DellPlayer1One(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Первый игрок удалён из первого списка.");
+            Player1One = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Первый игрок из первого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer2One)]
+        public static async Task DellPlayer2One(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Второй игрок удалён из первого списка.");
+            Player2One = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Второй игрок из первого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer3One)]
+        public static async Task DellPlayer3One(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Третий игрок удалён из первого списка.");
+            Player3One = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Третий игрок из первого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer4One)]
+        public static async Task DellPlayer4One(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Четвёртый игрок удалён из первого списка.");
+            Player4One = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Четвёртый игрок из первого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer5One)]
+        public static async Task DellPlayer5One(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Пятый игрок удалён из первого списка.");
+            Player5One = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Пятый игрок из первого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellReplacement1One)]
+        public static async Task DellReplacement1One(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Заменяющий игрок удалён из первого списка.");
+            Replacement1One = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Заменяющий игрок из первого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellReplacement2One)]
+        public static async Task DellReplacement2One(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Заменяющий игрок удалён из первого списка.");
+            Replacement2One = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Заменяющий игрок из первого списка удалён.", option);
+        }
+        #endregion
+        #region Two
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer1Two)]
+        public static async Task DellPlayer1Two(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Первый игрок удалён из второго списка.");
+            Player1Two = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Первый игрок из второго списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer2Two)]
+        public static async Task DellPlayer2Two(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Второй игрок удалён из второго списка.");
+            Player2Two = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Второй игрок из второго списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer3Two)]
+        public static async Task DellPlayer3Two(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Третий игрок удалён из второго списка.");
+            Player3Two = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Третий игрок из второго списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer4Two)]
+        public static async Task DellPlayer4Two(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Четвёртый игрок удалён из второго списка.");
+            Player4Two = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Четвёртый игрок из второго списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer5Two)]
+        public static async Task DellPlayer5Two(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Пятый игрок удалён из второго списка.");
+            Player5Two = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Пятый игрок из второго списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellReplacement1Two)]
+        public static async Task DellReplacement1Two(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Заменяющий игрок удалён из второго списка.");
+            Replacement1Two = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Заменяющий игрок из второго списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellReplacement2Two)]
+        public static async Task DellReplacement2Two(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Заменяющий игрок удалён из второго списка.");
+            Replacement2Two = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Заменяющий игрок из второго списка удалён.", option);
+        }
+        #endregion
+        #region Three
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer1Three)]
+        public static async Task DellPlayer1Three(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Первый игрок удалён из третьего списка.");
+            Player1Three = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Первый игрок из третьего списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer2Three)]
+        public static async Task DellPlayer2Three(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Второй игрок удалён из третьего списка.");
+            Player2Three = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Второй игрок из третьего списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer3Three)]
+        public static async Task DellPlayer3Three(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Третий игрок удалён из третьего списка.");
+            Player3Three = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Третий игрок из третьего списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer4Three)]
+        public static async Task DellPlayer4Three(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Четвёртый игрок удалён из третьего списка.");
+            Player4Three = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Четвёртый игрок из третьего списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer5Three)]
+        public static async Task DellPlayer5Three(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Пятый игрок удалён из третьего списка.");
+            Player5Three = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Пятый игрок из третьего списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellReplacement1Three)]
+        public static async Task DellReplacement1Three(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Заменяющий игрок удалён из третьего списка.");
+            Replacement1Three = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Заменяющий игрок из третьего списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellReplacement2Three)]
+        public static async Task DellReplacement2Three(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Заменяющий игрок удалён из третьего списка.");
+            Replacement2Three = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Заменяющий игрок из третьего списка удалён.", option);
+        }
+        #endregion
+        #region Four
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer1Four)]
+        public static async Task DellPlayer1Four(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Первый игрок удалён из четвёртого списка.");
+            Player1Four = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Первый игрок из четвёртого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer2Four)]
+        public static async Task DellPlayer2Four(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Второй игрок удалён из четвёртого списка.");
+            Player2Four = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Второй игрок из четвёртого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer3Four)]
+        public static async Task DellPlayer3Four(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Третий игрок удалён из четвёртого списка.");
+            Player3Four = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Третий игрок из четвёртого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer4Four)]
+        public static async Task DellPlayer4Four(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Четвёртый игрок удалён из четвёртого списка.");
+            Player4Four = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Четвёртый игрок из четвёртого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellPlayer5Four)]
+        public static async Task DellPlayer5Four(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Пятый игрок удалён из четвёртого списка.");
+            Player5Four = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Пятый игрок из четвёртого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellReplacement1Four)]
+        public static async Task DellReplacement1Four(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Заменяющий игрок удалён из четвёртого списка.");
+            Replacement1Four = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Заменяющий игрок из четвёртого списка удалён.", option);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.DellReplacement2Four)]
+        public static async Task DellReplacement2Four(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Заменяющий игрок удалён из четвёртого списка.");
+            Replacement2Four = "Место не занято.";
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option = new OptionMessage();
+            option.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "Заменяющий игрок из четвёртого списка удалён.", option);
+        }
+        #endregion
+
+        #endregion
+
+        [ReplyMenuHandler("/wordS")]
+        public static async Task Words(ITelegramBotClient botClient, Update update)
+        {
+            var msg = update.Message;
+            if (msg?.Chat.Id == 5122938690)
+            {
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Word: " + wordS);
+            }
+        }
+
+        [ReplyMenuHandler("/AddPlay")]
+        public static async Task AddPlay(ITelegramBotClient botClient, Update update)
         {
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
@@ -870,6 +1397,7 @@ namespace Community9Cold_Bot.Middlewares
             ProfilPlzP = true;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Просмотр профиля владельцем.");
                 var ProfilPlz = new InlineCallback("Подтвердить", PRHeadlers.ProfilPlz);
 
                 var list = new List<IInlineContent>();
@@ -889,7 +1417,9 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Удаление основного состава владельцем.");
                 AllPlzEsport = null;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Основной состав удалён.");
             }
         }
 
@@ -899,7 +1429,9 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Удаление чёрного списка владельцем.");
                 AllPlzBlack = null;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Чёрный список удалён.");
             }
         }
 
@@ -909,7 +1441,9 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Удаление белого списка владельцем.");
                 AllPlzWhite = null;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Белый список удалён.");
             }
         }
 
@@ -919,7 +1453,9 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Удаление всех сообщений владельцем.");
                 wordS = null;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Сообщения удалены.");
             }
         }
 
@@ -929,7 +1465,9 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Последние сообщение удалено владельцем.");
                 MessSim = null;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Последние сообщение удалено.");
             }
         }
 
@@ -940,6 +1478,7 @@ namespace Community9Cold_Bot.Middlewares
             BlackSpisoc = true;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Обновление чёрного списка владельцем");
                 var UpdateListBlack = new InlineCallback("Подтвердить", PRHeadlers.UpdateListBlack);
                 var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
 
@@ -962,6 +1501,7 @@ namespace Community9Cold_Bot.Middlewares
             WhiteSpisoc = true;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Обновление белого списка владельцем");
                 var UpdateListWhite = new InlineCallback("Подтвердить", PRHeadlers.UpdateListWhite);
                 var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
 
@@ -984,6 +1524,7 @@ namespace Community9Cold_Bot.Middlewares
             EsportSpisoc = true;
             if (msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Обновление основного состава владельцем");
                 var UpdateListEsport = new InlineCallback("Подтвердить", PRHeadlers.UpdateListEsport);
                 var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
 
@@ -1005,7 +1546,7 @@ namespace Community9Cold_Bot.Middlewares
             var msg = update.Message;
             if (msg?.Chat.Id == 5122938690)
             {
-                await PRTelegramBot.Helpers.Message.Send(botClient, update, "ffffffffff5");
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList1}");
             }
         }
 
@@ -1103,14 +1644,17 @@ namespace Community9Cold_Bot.Middlewares
             isAdmin = await botClient.GetBotDataOrNull().Options.AdminManager.HasUser(update.GetChatId());
             if (!isAdmin)
             {
+                Console.WriteLine("Отправлены команды для пользователей.");
                 await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Все Slash команды:\n\r\n/Balance - <b>показывает</b> какой у вас <b>баланс</b>.\n\r/TelegramName - <b>показывает</b> ваш <b>telegram ник</b>.\n\r/TelegramID - <b>показывает</b> ваше <b>telegram id</b>.\n\r/P - <b>показывает</b> ваш <b>профиль</b>.\n\r/BlackList или /BL - <b>показывает чёрный список</b>.\n\r/WhiteList или /WL - <b>показывает белый список</b>.\n\r/Esport - <b>показывает основной состав</b>.\n\r/reg или /log - <b>регистрация</b>.\n\r/Commands - <b>показывает все команды</b>.\n\r/News - <b>Показывает новости</b>.");
             }
             else if (isAdmin && msg?.Chat.Id == 5122938690)
             {
+                Console.WriteLine("Отправлены команды для владельца.");
                 await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Все Slash команды:\n\r\n/Balance - <b>показывает</b> какой у вас <b>баланс</b>.\n\r/TelegramName - <b>показывает</b> ваш <b>telegram ник</b>.\n\r/TelegramID - <b>показывает</b> ваше <b>telegram id</b>.\n\r/P - <b>показывает</b> ваш <b>профиль</b>.\n\r/BlackList или /BL - <b>показывает чёрный список</b>.\n\r/WhiteList или /WL - <b>показывает белый список</b>.\n\r/Esport - <b>показывает основной состав</b>.\n\r/reg или /log - <b>регистрация</b>.\n\r/Commands - <b>показывает все команды</b>.\n\r/News - <b>Показывает новости</b>.\n\r\nКоманды админа:\n\r\n/AllPlzCol - <b>показывает колличество сообщений</b>.\n\r/AllPlz - <b>показывает всех пользователей</b>.\n\r/AllMess - <b>показывает колличество сообщений</b>.\n\r\nКоманды владельца: \n\r\n/WordS - <b>показывает все сообщения</b>.\n\r/ProfilPlz - <b>просмотр профиля</b> и его редакция.\n\r/CleanEsport - <b>очистить</b> весь <b>основной состав</b>.\n\r/CleanMessSim - <b>очистить последние сообщение</b>.\n\r/CleanWordS - <b>очистить все сообщения</b>.\n\r/CleanWhiteList - <b>очистить</b> весь <b>белый список</b>.\n\r/CleanBlackList - <b>очистить</b> весь <b>чёрный список</b>.\n\r/UpdateListEsport - <b>обновляет список основного состава</b>.\n\r/UpdateListWhite - <b>обновляет белый список</b>.\n\r/UpdateListBlack - <b>обновляет чёрный список</b>.\n\r/Debugging - <b>отладка</b>.\n\r/NewsAdd - <b>добавляет новости</b>.\n\r/NewsDell - <b>удаляет новости</b>.");
             }
             else if (isAdmin)
             {
+                Console.WriteLine("Отправлены команды для администратора.");
                 await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Все Slash команды:\n\r\n/Balance - <b>показывает</b> какой у вас <b>баланс</b>.\n\r/TelegramName - <b>показывает</b> ваш <b>telegram ник</b>.\n\r/TelegramID - <b>показывает</b> ваше <b>telegram id</b>.\n\r/P - <b>показывает</b> ваш <b>профиль</b>.\n\r/BlackList или /BL - <b>показывает чёрный список</b>.\n\r/WhiteList или /WL - <b>показывает белый список</b>.\n\r/Esport - <b>показывает основной состав</b>.\n\r/reg или /log - <b>регистрация</b>.\n\r/Commands - <b>показывает все команды</b>.\n\r/News - <b>Показывает новости</b>.\n\r\nКоманды админа:\n\r\n/AllPlzCol - <b>показывает колличество сообщений</b>.\n\r/AllPlz - <b>показывает всех пользователей</b>.\n\r/AllMess - <b>показывает колличество сообщений</b>.\n\r/NewsAdd - <b>добавляет новости</b>.\n\r/NewsDell - <b>удаляет новости</b>.");
             }
             else
@@ -1122,18 +1666,21 @@ namespace Community9Cold_Bot.Middlewares
         [ReplyMenuHandler("/Balance")]
         public static async Task BalanceCommand(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр баланса.");
             await PRTelegramBot.Helpers.Message.Send(botClient, update, "Error balance (Ошибка баланса)");
         }
 
         [ReplyMenuHandler("/News")]
         public static async Task NewsSlashPlz(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр новостей.");
             await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{News}");
         }
 
         [ReplyMenuHandler("/TelegramName")]
         public static async Task TelegramName(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр TelegramName.");
             var msg = update.Message;
             await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Ваш TelegramName: {msg?.Chat.FirstName}");
         }
@@ -1141,6 +1688,7 @@ namespace Community9Cold_Bot.Middlewares
         [ReplyMenuHandler("/TelegramUserName")]
         public static async Task TelegramUserName(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр TelegramUserName.");
             var msg = update.Message;
             await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Ваш TelegramUserName: {msg?.Chat.Username}");
         }
@@ -1148,13 +1696,47 @@ namespace Community9Cold_Bot.Middlewares
         [ReplyMenuHandler("/TelegramID")]
         public static async Task TelegramID(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр TelegramID.");
             var msg = update.Message;
             await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Ваш TelegramID: {msg?.Chat.Id}");
+        }
+
+        [ReplyMenuHandler("/List1")]
+        public static async Task List1(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Просмотр первого списка.");
+            var msg = update.Message;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList1}");
+        }
+
+        [ReplyMenuHandler("/List2")]
+        public static async Task List2(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Просмотр второго списка.");
+            var msg = update.Message;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList2}");
+        }
+
+        [ReplyMenuHandler("/List3")]
+        public static async Task List3(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Просмотр третьего списка.");
+            var msg = update.Message;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList3}");
+        }
+
+        [ReplyMenuHandler("/List4")]
+        public static async Task List4(ITelegramBotClient botClient, Update update)
+        {
+            Console.WriteLine("Просмотр четвёртого списка.");
+            var msg = update.Message;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList4}");
         }
 
         [ReplyMenuHandler("/P", "Профиль", "Мой профиль", "профиль", "мой профиль", "/Profile", "/Plz")]
         public static async Task Profil(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр профиля.");
             var msg = update.Message;
 
             IDConverts2 = Convert.ToString(msg?.Chat.Id);
@@ -3792,9 +4374,10 @@ namespace Community9Cold_Bot.Middlewares
             IDConverts = null;
         }
 
-        [ReplyMenuHandler("/ProfilPlz")]
+        [ReplyMenuHandler("/ProfilInfo")]
         public static async Task ProfilPlzSlashPl(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр профиля пользователем.");
             var msg = update.Message;
             ProfilPlzPPl = true;
             var ProfilPlz = new InlineCallback("Подтвердить", PRHeadlers.ProfilPlzPl);
@@ -3812,18 +4395,21 @@ namespace Community9Cold_Bot.Middlewares
         [ReplyMenuHandler("/Esport", "Основной состав", "Основа", "Основа клана", "Основной состав клана", "/EsportList")]
         public static async Task Esport(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр основного состава.");
             await PRTelegramBot.Helpers.Message.Send(botClient, update, "Основной состав: \n\r\n" + AllPlzEsport);
         }
 
         [ReplyMenuHandler("/BlackList", "Чёрный список", "BL", "чёрный список", "ЧС", "чс", "черный список", "чёрный список")]
         public static async Task Black(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр чёрного списка.");
             await PRTelegramBot.Helpers.Message.Send(botClient, update, "Чёрный список: \n\r\n" + AllPlzBlack);
         }
 
         [ReplyMenuHandler("/WhiteList", "Белый список", "WL", "белый список", "БС")]
         public static async Task White(ITelegramBotClient botClient, Update update)
         {
+            Console.WriteLine("Просмотр белого списка.");
             await PRTelegramBot.Helpers.Message.Send(botClient, update, "Белый список: \n\r\n" + AllPlzWhite);
         }
 
@@ -3843,6 +4429,8 @@ namespace Community9Cold_Bot.Middlewares
             var Commands = new InlineCallback("Slash Команды", PRHeadlers.Commands);
             //varCaseMain =new InlineCallback("Case 📦",PRHeadlers.CaseMain);
             var Maps = new InlineCallback("Играемые карты", PRHeadlers.Maps);
+            var Play = new InlineCallback("Расписание", PRHeadlers.Play);
+
 
             var list = new List<IInlineContent>();
             list.Add(example);
@@ -3853,6 +4441,7 @@ namespace Community9Cold_Bot.Middlewares
             list.Add(Commands);
             //listAddCaseMain);
             list.Add(Maps);
+            list.Add(Play);
 
             var menu = MenuGenerator.InlineKeyboard(3, list);
 
@@ -5268,10 +5857,12 @@ namespace Community9Cold_Bot.Middlewares
                 var optionO = new OptionMessage();
                 optionO.MenuInlineKeyboardMarkup = menuO;
 
+                Console.WriteLine("Вывод л.");
                 if (NameSimProfilPlz == "1" || NameSimProfilPlz == IDTelegram1 || NameSimProfilPlz == NameStandoff1 || NameSimProfilPlz == IDStandoff1 || NameSimProfilPlz == NameTelegram1)
                 {
                     if (ProfilAva1 == "Берёзовый")
                     {
+                        Console.WriteLine("Вывод был.");
                         await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Пользователь: {NameStandoff1}\n\r\n TGN: {NameTelegram1}\n\r TGID: {IDTelegram1}\n\r TGUN: {UserNameTelegram1}\n\r SON: {NameStandoff1}\n\r SOID: {IDStandoff1}\n\rБаланс: {Balanc1}\n\rАватарка: {ProfilAva1}", optionO);
                     }
                 }
@@ -11901,7 +12492,8863 @@ namespace Community9Cold_Bot.Middlewares
             await PRTelegramBot.Helpers.Message.Send(botClient, update, "https://radikal.host/i/Mx8Rld", option1);
         }
         #endregion
-        //Получение аватарки
+        //Получение аватарки.
+
+        #region Play
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play)]
+        public static async Task Play(ITelegramBotClient botClient, Update update)
+        {
+            #region 0Core
+            if (Play1 == "Игр не запланировано." && Play2 == "Игр не запланировано." && Play3 == "Игр не запланировано." && Play4 == "Игр не запланировано.")
+            {
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "На сегодня игр не запланировано.", option1);
+            }
+            #endregion
+            //--------------------------------------------------------------------------------------КОМБИНАЦИИ ОТСУТСТВУЮТ (ВСЕГО 0)--------------------------------------------------------------------------------------------
+            #region 1Core
+            else if (Play1 != "Игр не запланировано." && Play2 == "Игр не запланировано." && Play3 == "Игр не запланировано." && Play4 == "Игр не запланировано.") 
+            {
+                var Play1P = new InlineCallback("Подтвердить участие в первой игре", PRHeadlers.Play1P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play1P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play2 != "Игр не запланировано." && Play1 == "Игр не запланировано." && Play3 == "Игр не запланировано." && Play4 == "Игр не запланировано.")
+            {
+                var Play2P = new InlineCallback("Подтвердить участие во второй игре", PRHeadlers.Play2P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play2P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play3 != "Игр не запланировано." && Play1 == "Игр не запланировано." && Play2 == "Игр не запланировано." && Play4 == "Игр не запланировано.")
+            {
+                var Play3P = new InlineCallback("Подтвердить участие в третьей игре", PRHeadlers.Play3P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play3P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play4 != "Игр не запланировано." && Play1 == "Игр не запланировано." && Play2 == "Игр не запланировано." && Play3 == "Игр не запланировано.")
+            {
+                var Play4P = new InlineCallback("Подтвердить участие в четвёртой игре", PRHeadlers.Play4P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play4P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            #endregion
+            //--------------------------------------------------------------------------------------КОМБИНАЦИИ ИЗ 1 ЧИСЛА (ВСЕГО 4)--------------------------------------------------------------------------------------------
+            #region 2Core
+            else if (Play1 != "Игр не запланировано." && Play2 != "Игр не запланировано." && Play3 == "Игр не запланировано." && Play4 == "Игр не запланировано.")
+            {
+                var Play1P = new InlineCallback("Подтвердить участие в первой игре", PRHeadlers.Play1P);
+                var Play2P = new InlineCallback("Подтвердить участие во второй игре", PRHeadlers.Play2P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play1P);
+                list.Add(Play2P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play1 != "Игр не запланировано." && Play3 != "Игр не запланировано." && Play2 == "Игр не запланировано." && Play4 == "Игр не запланировано.")
+            {
+                var Play1P = new InlineCallback("Подтвердить участие в первой игре", PRHeadlers.Play1P);
+                var Play3P = new InlineCallback("Подтвердить участие в третьей игре", PRHeadlers.Play3P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play1P);
+                list.Add(Play3P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play1 != "Игр не запланировано." && Play4 != "Игр не запланировано." && Play2 == "Игр не запланировано." && Play3 == "Игр не запланировано.")
+            {
+                var Play1P = new InlineCallback("Подтвердить участие в первой игре", PRHeadlers.Play1P);
+                var Play4P = new InlineCallback("Подтвердить участие в четвёртой игре", PRHeadlers.Play4P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play1P);
+                list.Add(Play4P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play2 != "Игр не запланировано." && Play3 != "Игр не запланировано." && Play1 == "Игр не запланировано." && Play4 == "Игр не запланировано.")
+            {
+                var Play2P = new InlineCallback("Подтвердить участие во второй игре", PRHeadlers.Play2P);
+                var Play3P = new InlineCallback("Подтвердить участие в третьей игре", PRHeadlers.Play3P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play2P);
+                list.Add(Play3P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play2 != "Игр не запланировано." && Play4 != "Игр не запланировано." && Play1 == "Игр не запланировано." && Play3 == "Игр не запланировано.")
+            {
+                var Play2P = new InlineCallback("Подтвердить участие во второй игре", PRHeadlers.Play2P);
+                var Play4P = new InlineCallback("Подтвердить участие в четвёртой игре", PRHeadlers.Play4P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play2P);
+                list.Add(Play4P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play3 != "Игр не запланировано." && Play4 != "Игр не запланировано." && Play1 == "Игр не запланировано." && Play2 == "Игр не запланировано.")
+            {
+                var Play3P = new InlineCallback("Подтвердить участие в третьей игре", PRHeadlers.Play3P);
+                var Play4P = new InlineCallback("Подтвердить участие в четвёртой игре", PRHeadlers.Play4P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play3P);
+                list.Add(Play4P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            #endregion
+            //--------------------------------------------------------------------------------------КОМБИНАЦИИ ИЗ 2 ЧИСЕЛ (ВСЕГО 6)--------------------------------------------------------------------------------------------
+            #region 3Core
+            else if (Play1 != "Игр не запланировано." && Play2 != "Игр не запланировано." && Play3 != "Игр не запланировано." && Play4 == "Игр не запланировано.")
+            {
+                var Play1P = new InlineCallback("Подтвердить участие в первой игре", PRHeadlers.Play1P);
+                var Play2P = new InlineCallback("Подтвердить участие во второй игре", PRHeadlers.Play2P);
+                var Play3P = new InlineCallback("Подтвердить участие в третьей игре", PRHeadlers.Play3P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play1P);
+                list.Add(Play2P);
+                list.Add(Play3P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play1 != "Игр не запланировано." && Play2 != "Игр не запланировано." && Play4 != "Игр не запланировано." && Play3 == "Игр не запланировано.")
+            {
+                var Play1P = new InlineCallback("Подтвердить участие в первой игре", PRHeadlers.Play1P);
+                var Play2P = new InlineCallback("Подтвердить участие во второй игре", PRHeadlers.Play2P);
+                var Play4P = new InlineCallback("Подтвердить участие в четвёртой игре", PRHeadlers.Play4P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play1P);
+                list.Add(Play2P);
+                list.Add(Play4P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play1 != "Игр не запланировано." && Play3 != "Игр не запланировано." && Play4 != "Игр не запланировано." && Play2 == "Игр не запланировано.")
+            {
+                var Play1P = new InlineCallback("Подтвердить участие в первой игре", PRHeadlers.Play1P);
+                var Play3P = new InlineCallback("Подтвердить участие в третьей игре", PRHeadlers.Play3P);
+                var Play4P = new InlineCallback("Подтвердить участие в четвёртой игре", PRHeadlers.Play4P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play1P);
+                list.Add(Play3P);
+                list.Add(Play4P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            else if (Play2 != "Игр не запланировано." && Play3 != "Игр не запланировано." && Play4 != "Игр не запланировано." && Play1 == "Игр не запланировано.")
+            {
+                var Play2P = new InlineCallback("Подтвердить участие во второй игре", PRHeadlers.Play2P);
+                var Play3P = new InlineCallback("Подтвердить участие в третьей игре", PRHeadlers.Play3P);
+                var Play4P = new InlineCallback("Подтвердить участие в четвёртой игре", PRHeadlers.Play4P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play2P);
+                list.Add(Play3P);
+                list.Add(Play4P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            #endregion
+            //--------------------------------------------------------------------------------------КОМБИНАЦИИ ИЗ 3 ЧИСЕЛ (ВСЕГО 4)--------------------------------------------------------------------------------------------
+            #region 4Core
+            else if (Play1 != "Игр не запланировано." && Play2 != "Игр не запланировано." && Play3 != "Игр не запланировано." && Play4 != "Игр не запланировано.")
+            {
+                var Play1P = new InlineCallback("Подтвердить участие в первой игре", PRHeadlers.Play1P);
+                var Play2P = new InlineCallback("Подтвердить участие во второй игре", PRHeadlers.Play2P);
+                var Play3P = new InlineCallback("Подтвердить участие в третьей игре", PRHeadlers.Play3P);
+                var Play4P = new InlineCallback("Подтвердить участие в четвёртой игре", PRHeadlers.Play4P);
+                var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+                var list = new List<IInlineContent>();
+                list.Add(Play1P);
+                list.Add(Play2P);
+                list.Add(Play3P);
+                list.Add(Play4P);
+                list.Add(example3);
+                var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+                var option1 = new OptionMessage();
+                option1.MenuInlineKeyboardMarkup = menuPrav;
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayAll}", option1);
+            }
+            #endregion
+            //--------------------------------------------------------------------------------------КОМБИНАЦИИ ИЗ 4 ЧИСЕЛ (ВСЕГО 1)--------------------------------------------------------------------------------------------
+        }
+
+        #region Play
+
+        #region Play1
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play1P)]
+        public static async Task Play1P(ITelegramBotClient botClient, Update update)
+        {
+            TelegramPlayYesProverca = true;
+            var Play1Yes = new InlineCallback("Подтвердить", PRHeadlers.Play1Yes);
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(Play1Yes);
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "<b>Отправьте ваше TelegramID или StandoffID</b> и нажмите подтвердить, после вы будете добавлены в список участников. Узнать TelegramID командой <b>/TelegramID</b>. Для отмены перейдите в 'Меню'", option1);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play1Yes)]
+        public static async Task Play1Yes(ITelegramBotClient botClient, Update update)
+        {
+            TelegramPlayYesProverca = false;
+            var PlaySOne = new InlineCallback("Списки участников.", PRHeadlers.PlaySOne);
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(PlaySOne);
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+
+            #region PlayerAll
+            if (TelegramPlayYes == IDTelegram1 || TelegramPlayYes == IDStandoff1)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram2 || TelegramPlayYes == IDStandoff2)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram3 || TelegramPlayYes == IDStandoff3)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram4 || TelegramPlayYes == IDStandoff4)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram5 || TelegramPlayYes == IDStandoff5)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram6 || TelegramPlayYes == IDStandoff6)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram7 || TelegramPlayYes == IDStandoff7)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram8 || TelegramPlayYes == IDStandoff8)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram9 || TelegramPlayYes == IDStandoff9)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram10 || TelegramPlayYes == IDStandoff10)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram11 || TelegramPlayYes == IDStandoff11)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram12 || TelegramPlayYes == IDStandoff12)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram13 || TelegramPlayYes == IDStandoff13)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram14 || TelegramPlayYes == IDStandoff14)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram15 || TelegramPlayYes == IDStandoff15)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram16 || TelegramPlayYes == IDStandoff16)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram17 || TelegramPlayYes == IDStandoff17)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram18 || TelegramPlayYes == IDStandoff18)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram19 || TelegramPlayYes == IDStandoff19)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram20 || TelegramPlayYes == IDStandoff20)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram21 || TelegramPlayYes == IDStandoff21)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram22 || TelegramPlayYes == IDStandoff22)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram23 || TelegramPlayYes == IDStandoff23)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram24 || TelegramPlayYes == IDStandoff24)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram25 || TelegramPlayYes == IDStandoff25)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram26 || TelegramPlayYes == IDStandoff26)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram27 || TelegramPlayYes == IDStandoff27)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram28 || TelegramPlayYes == IDStandoff28)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram29 || TelegramPlayYes == IDStandoff29)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram30 || TelegramPlayYes == IDStandoff30)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram31 || TelegramPlayYes == IDStandoff31)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram32 || TelegramPlayYes == IDStandoff32)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram33 || TelegramPlayYes == IDStandoff33)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram34 || TelegramPlayYes == IDStandoff34)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram35 || TelegramPlayYes == IDStandoff35)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram36 || TelegramPlayYes == IDStandoff36)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram37 || TelegramPlayYes == IDStandoff37)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram38 || TelegramPlayYes == IDStandoff38)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram39 || TelegramPlayYes == IDStandoff39)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram40 || TelegramPlayYes == IDStandoff40)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram41 || TelegramPlayYes == IDStandoff41)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram42 || TelegramPlayYes == IDStandoff42)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram43 || TelegramPlayYes == IDStandoff43)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram44 || TelegramPlayYes == IDStandoff44)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram45 || TelegramPlayYes == IDStandoff45)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram46 || TelegramPlayYes == IDStandoff46)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram47 || TelegramPlayYes == IDStandoff47)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram48 || TelegramPlayYes == IDStandoff48)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram49 || TelegramPlayYes == IDStandoff49)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram50 || TelegramPlayYes == IDStandoff50)
+            {
+                if (Player1One == "Место не занято.")
+                {
+                    Player1One = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в первую игру.", option1);
+                }
+                else if (Player2One == "Место не занято.")
+                {
+                    Player2One = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player3One == "Место не занято.")
+                {
+                    Player3One = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player4One == "Место не занято.")
+                {
+                    Player4One = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Player5One == "Место не занято.")
+                {
+                    Player5One = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в первую игру.", option1);
+                }
+                else if (Replacement1One == "Место не занято.")
+                {
+                    Replacement1One = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else if (Replacement2One == "Место не занято.")
+                {
+                    Replacement2One = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в первую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на первый матч нет.", option1);
+                }
+            }
+            else 
+            {
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Error registtration (Ошибка регистрации).", option1);
+            }
+            #endregion
+        }
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.PlaySOne)]
+        public static async Task PlaySOne(ITelegramBotClient botClient, Update update)
+        {
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList1}", option1);
+        }
+        #endregion
+
+        #region Play2
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play2P)]
+        public static async Task Play2P(ITelegramBotClient botClient, Update update)
+        {
+            TelegramPlayYesProverca = true;
+            var Play2Yes = new InlineCallback("Подтвердить", PRHeadlers.Play2Yes);
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(Play2Yes);
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "<b>Отправьте ваше TelegramID или StandoffID</b> и нажмите подтвердить, после вы будете добавлены в список участников. Узнать TelegramID командой <b>/TelegramID</b>. Для отмены перейдите в 'Меню'", option1);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play2Yes)]
+        public static async Task Play2Yes(ITelegramBotClient botClient, Update update)
+        {
+            TelegramPlayYesProverca = false;
+            var PlaySTwo = new InlineCallback("Списки участников.", PRHeadlers.PlaySTwo);
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(PlaySTwo);
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+
+            #region PlayerAll
+            if (TelegramPlayYes == IDTelegram1 || TelegramPlayYes == IDStandoff1)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram2 || TelegramPlayYes == IDStandoff2)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram3 || TelegramPlayYes == IDStandoff3)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram4 || TelegramPlayYes == IDStandoff4)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram5 || TelegramPlayYes == IDStandoff5)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram6 || TelegramPlayYes == IDStandoff6)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram7 || TelegramPlayYes == IDStandoff7)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram8 || TelegramPlayYes == IDStandoff8)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram9 || TelegramPlayYes == IDStandoff9)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram10 || TelegramPlayYes == IDStandoff10)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram11 || TelegramPlayYes == IDStandoff11)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram12 || TelegramPlayYes == IDStandoff12)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram13 || TelegramPlayYes == IDStandoff13)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram14 || TelegramPlayYes == IDStandoff14)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram15 || TelegramPlayYes == IDStandoff15)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram16 || TelegramPlayYes == IDStandoff16)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram17 || TelegramPlayYes == IDStandoff17)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram18 || TelegramPlayYes == IDStandoff18)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram19 || TelegramPlayYes == IDStandoff19)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram20 || TelegramPlayYes == IDStandoff20)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram21 || TelegramPlayYes == IDStandoff21)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram22 || TelegramPlayYes == IDStandoff22)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram23 || TelegramPlayYes == IDStandoff23)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram24 || TelegramPlayYes == IDStandoff24)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram25 || TelegramPlayYes == IDStandoff25)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram26 || TelegramPlayYes == IDStandoff26)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram27 || TelegramPlayYes == IDStandoff27)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram28 || TelegramPlayYes == IDStandoff28)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram29 || TelegramPlayYes == IDStandoff29)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram30 || TelegramPlayYes == IDStandoff30)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram31 || TelegramPlayYes == IDStandoff31)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram32 || TelegramPlayYes == IDStandoff32)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram33 || TelegramPlayYes == IDStandoff33)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram34 || TelegramPlayYes == IDStandoff34)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram35 || TelegramPlayYes == IDStandoff35)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram36 || TelegramPlayYes == IDStandoff36)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram37 || TelegramPlayYes == IDStandoff37)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram38 || TelegramPlayYes == IDStandoff38)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram39 || TelegramPlayYes == IDStandoff39)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram40 || TelegramPlayYes == IDStandoff40)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram41 || TelegramPlayYes == IDStandoff41)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram42 || TelegramPlayYes == IDStandoff42)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram43 || TelegramPlayYes == IDStandoff43)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram44 || TelegramPlayYes == IDStandoff44)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram45 || TelegramPlayYes == IDStandoff45)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram46 || TelegramPlayYes == IDStandoff46)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram47 || TelegramPlayYes == IDStandoff47)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram48 || TelegramPlayYes == IDStandoff48)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram49 || TelegramPlayYes == IDStandoff49)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram50 || TelegramPlayYes == IDStandoff50)
+            {
+                if (Player1Two == "Место не занято.")
+                {
+                    Player1Two = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player2Two == "Место не занято.")
+                {
+                    Player2Two = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player3Two == "Место не занято.")
+                {
+                    Player3Two = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player4Two == "Место не занято.")
+                {
+                    Player4Two = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Player5Two == "Место не занято.")
+                {
+                    Player5Two = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены во вторую игру.", option1);
+                }
+                else if (Replacement1Two == "Место не занято.")
+                {
+                    Replacement1Two = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else if (Replacement2Two == "Место не занято.")
+                {
+                    Replacement2Two = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену во вторую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на второй матч нет .", option1);
+                }
+            }
+            else
+            {
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Error registtration (Ошибка регистрации).", option1);
+            }
+            #endregion
+        }
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.PlaySTwo)]
+        public static async Task PlaySTwo(ITelegramBotClient botClient, Update update)
+        {
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList2}", option1);
+        }
+
+        #endregion
+
+        #region Play3
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play3P)]
+        public static async Task Play3P(ITelegramBotClient botClient, Update update)
+        {
+            TelegramPlayYesProverca = true;
+            var Play3Yes = new InlineCallback("Подтвердить", PRHeadlers.Play3Yes);
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(Play3Yes);
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "<b>Отправьте ваше TelegramID или StandoffID</b> и нажмите подтвердить, после вы будете добавлены в список участников. Узнать TelegramID командой <b>/TelegramID</b>. Для отмены перейдите в 'Меню'", option1);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play3Yes)]
+        public static async Task Play3Yes(ITelegramBotClient botClient, Update update)
+        {
+            TelegramPlayYesProverca = false;
+            var PlaySThree = new InlineCallback("Списки участников.", PRHeadlers.PlaySThree);
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(PlaySThree);
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+
+            #region PlayerAll
+            if (TelegramPlayYes == IDTelegram1 || TelegramPlayYes == IDStandoff1)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram2 || TelegramPlayYes == IDStandoff2)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram3 || TelegramPlayYes == IDStandoff3)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram4 || TelegramPlayYes == IDStandoff4)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram5 || TelegramPlayYes == IDStandoff5)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram6 || TelegramPlayYes == IDStandoff6)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram7 || TelegramPlayYes == IDStandoff7)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram8 || TelegramPlayYes == IDStandoff8)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram9 || TelegramPlayYes == IDStandoff9)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram10 || TelegramPlayYes == IDStandoff10)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram11 || TelegramPlayYes == IDStandoff11)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram12 || TelegramPlayYes == IDStandoff12)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram13 || TelegramPlayYes == IDStandoff13)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram14 || TelegramPlayYes == IDStandoff14)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram15 || TelegramPlayYes == IDStandoff15)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram16 || TelegramPlayYes == IDStandoff16)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram17 || TelegramPlayYes == IDStandoff17)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram18 || TelegramPlayYes == IDStandoff18)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram19 || TelegramPlayYes == IDStandoff19)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram20 || TelegramPlayYes == IDStandoff20)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram21 || TelegramPlayYes == IDStandoff21)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram22 || TelegramPlayYes == IDStandoff22)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram23 || TelegramPlayYes == IDStandoff23)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram24 || TelegramPlayYes == IDStandoff24)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram25 || TelegramPlayYes == IDStandoff25)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram26 || TelegramPlayYes == IDStandoff26)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram27 || TelegramPlayYes == IDStandoff27)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram28 || TelegramPlayYes == IDStandoff28)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram29 || TelegramPlayYes == IDStandoff29)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram30 || TelegramPlayYes == IDStandoff30)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram31 || TelegramPlayYes == IDStandoff31)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram32 || TelegramPlayYes == IDStandoff32)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram33 || TelegramPlayYes == IDStandoff33)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram34 || TelegramPlayYes == IDStandoff34)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram35 || TelegramPlayYes == IDStandoff35)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram36 || TelegramPlayYes == IDStandoff36)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram37 || TelegramPlayYes == IDStandoff37)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram38 || TelegramPlayYes == IDStandoff38)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram39 || TelegramPlayYes == IDStandoff39)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram40 || TelegramPlayYes == IDStandoff40)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram41 || TelegramPlayYes == IDStandoff41)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram42 || TelegramPlayYes == IDStandoff42)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram43 || TelegramPlayYes == IDStandoff43)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram44 || TelegramPlayYes == IDStandoff44)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram45 || TelegramPlayYes == IDStandoff45)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram46 || TelegramPlayYes == IDStandoff46)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram47 || TelegramPlayYes == IDStandoff47)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram48 || TelegramPlayYes == IDStandoff48)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram49 || TelegramPlayYes == IDStandoff49)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram50 || TelegramPlayYes == IDStandoff50)
+            {
+                if (Player1Three == "Место не занято.")
+                {
+                    Player1Three = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в третью игру.", option1);
+                }
+                else if (Player2Three == "Место не занято.")
+                {
+                    Player2Three = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player3Three == "Место не занято.")
+                {
+                    Player3Three = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player4Three == "Место не занято.")
+                {
+                    Player4Three = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Player5Three == "Место не занято.")
+                {
+                    Player5Three = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в третью игру.", option1);
+                }
+                else if (Replacement1Three == "Место не занято.")
+                {
+                    Replacement1Three = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else if (Replacement2Three == "Место не занято.")
+                {
+                    Replacement2Three = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в третью игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на третий матч нет .", option1);
+                }
+            }
+            else
+            {
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Error registtration (Ошибка регистрации).", option1);
+            }
+            #endregion
+        }
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.PlaySThree)]
+        public static async Task PlaySThree(ITelegramBotClient botClient, Update update)
+        {
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList3}", option1);
+        }
+
+        #endregion
+
+        #region Play4
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play4P)]
+        public static async Task Play4P(ITelegramBotClient botClient, Update update)
+        {
+            TelegramPlayYesProverca = true;
+            var Play4Yes = new InlineCallback("Подтвердить", PRHeadlers.Play4Yes);
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(Play4Yes);
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, "<b>Отправьте ваше TelegramID или StandoffID</b> и нажмите подтвердить, после вы будете добавлены в список участников. Узнать TelegramID командой <b>/TelegramID</b>. Для отмены перейдите в 'Меню'", option1);
+        }
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.Play4Yes)]
+        public static async Task Play4Yes(ITelegramBotClient botClient, Update update)
+        {
+            TelegramPlayYesProverca = false;
+            var PlaySFour = new InlineCallback("Списки участников.", PRHeadlers.PlaySFour);
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(PlaySFour);
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+
+            #region PlayerAll
+            if (TelegramPlayYes == IDTelegram1 || TelegramPlayYes == IDStandoff1)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram1}\n\rStandoffID: {IDStandoff1}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram2 || TelegramPlayYes == IDStandoff2)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram2}\n\rStandoffID: {IDStandoff2}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет.", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram3 || TelegramPlayYes == IDStandoff3)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram3}\n\rStandoffID: {IDStandoff3}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram4 || TelegramPlayYes == IDStandoff4)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram4}\n\rStandoffID: {IDStandoff4}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram5 || TelegramPlayYes == IDStandoff5)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram5}\n\rStandoffID: {IDStandoff5}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram6 || TelegramPlayYes == IDStandoff6)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram6}\n\rStandoffID: {IDStandoff6}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram7 || TelegramPlayYes == IDStandoff7)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram7}\n\rStandoffID: {IDStandoff7}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram8 || TelegramPlayYes == IDStandoff8)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram8}\n\rStandoffID: {IDStandoff8}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram9 || TelegramPlayYes == IDStandoff9)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram9}\n\rStandoffID: {IDStandoff9}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram10 || TelegramPlayYes == IDStandoff10)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram10}\n\rStandoffID: {IDStandoff10}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram11 || TelegramPlayYes == IDStandoff11)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram11}\n\rStandoffID: {IDStandoff11}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram12 || TelegramPlayYes == IDStandoff12)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram12}\n\rStandoffID: {IDStandoff12}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram13 || TelegramPlayYes == IDStandoff13)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram13}\n\rStandoffID: {IDStandoff13}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram14 || TelegramPlayYes == IDStandoff14)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram14}\n\rStandoffID: {IDStandoff14}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram15 || TelegramPlayYes == IDStandoff15)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram15}\n\rStandoffID: {IDStandoff15}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram16 || TelegramPlayYes == IDStandoff16)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram16}\n\rStandoffID: {IDStandoff16}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram17 || TelegramPlayYes == IDStandoff17)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram17}\n\rStandoffID: {IDStandoff17}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram18 || TelegramPlayYes == IDStandoff18)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram18}\n\rStandoffID: {IDStandoff18}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram19 || TelegramPlayYes == IDStandoff19)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram19}\n\rStandoffID: {IDStandoff19}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram20 || TelegramPlayYes == IDStandoff20)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram20}\n\rStandoffID: {IDStandoff20}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram21 || TelegramPlayYes == IDStandoff21)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram21}\n\rStandoffID: {IDStandoff21}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram22 || TelegramPlayYes == IDStandoff22)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram22}\n\rStandoffID: {IDStandoff22}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram23 || TelegramPlayYes == IDStandoff23)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram23}\n\rStandoffID: {IDStandoff23}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram24 || TelegramPlayYes == IDStandoff24)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram24}\n\rStandoffID: {IDStandoff24}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram25 || TelegramPlayYes == IDStandoff25)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram25}\n\rStandoffID: {IDStandoff25}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram26 || TelegramPlayYes == IDStandoff26)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram26}\n\rStandoffID: {IDStandoff26}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram27 || TelegramPlayYes == IDStandoff27)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram27}\n\rStandoffID: {IDStandoff27}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram28 || TelegramPlayYes == IDStandoff28)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram28}\n\rStandoffID: {IDStandoff28}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram29 || TelegramPlayYes == IDStandoff29)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram29}\n\rStandoffID: {IDStandoff29}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram30 || TelegramPlayYes == IDStandoff30)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram30}\n\rStandoffID: {IDStandoff30}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram31 || TelegramPlayYes == IDStandoff31)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram31}\n\rStandoffID: {IDStandoff31}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram32 || TelegramPlayYes == IDStandoff32)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram32}\n\rStandoffID: {IDStandoff32}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram33 || TelegramPlayYes == IDStandoff33)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram33}\n\rStandoffID: {IDStandoff33}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram34 || TelegramPlayYes == IDStandoff34)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram34}\n\rStandoffID: {IDStandoff34}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram35 || TelegramPlayYes == IDStandoff35)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram35}\n\rStandoffID: {IDStandoff35}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram36 || TelegramPlayYes == IDStandoff36)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram36}\n\rStandoffID: {IDStandoff36}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram37 || TelegramPlayYes == IDStandoff37)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram37}\n\rStandoffID: {IDStandoff37}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram38 || TelegramPlayYes == IDStandoff38)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram38}\n\rStandoffID: {IDStandoff38}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram39 || TelegramPlayYes == IDStandoff39)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram39}\n\rStandoffID: {IDStandoff39}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram40 || TelegramPlayYes == IDStandoff40)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram40}\n\rStandoffID: {IDStandoff40}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram41 || TelegramPlayYes == IDStandoff41)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram41}\n\rStandoffID: {IDStandoff41}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram42 || TelegramPlayYes == IDStandoff42)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram42}\n\rStandoffID: {IDStandoff42}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram43 || TelegramPlayYes == IDStandoff43)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram43}\n\rStandoffID: {IDStandoff43}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram44 || TelegramPlayYes == IDStandoff44)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram44}\n\rStandoffID: {IDStandoff44}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram45 || TelegramPlayYes == IDStandoff45)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram45}\n\rStandoffID: {IDStandoff45}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram46 || TelegramPlayYes == IDStandoff46)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram46}\n\rStandoffID: {IDStandoff46}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram47 || TelegramPlayYes == IDStandoff47)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram47}\n\rStandoffID: {IDStandoff47}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram48 || TelegramPlayYes == IDStandoff48)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram48}\n\rStandoffID: {IDStandoff48}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram49 || TelegramPlayYes == IDStandoff49)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram49}\n\rStandoffID: {IDStandoff49}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else if (TelegramPlayYes == IDTelegram50 || TelegramPlayYes == IDStandoff50)
+            {
+                if (Player1Four == "Место не занято.")
+                {
+                    Player1Four = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, $"Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player2Four == "Место не занято.")
+                {
+                    Player2Four = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player3Four == "Место не занято.")
+                {
+                    Player3Four = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player4Four == "Место не занято.")
+                {
+                    Player4Four = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Player5Four == "Место не занято.")
+                {
+                    Player5Four = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены в четвёртую игру.", option1);
+                }
+                else if (Replacement1Four == "Место не занято.")
+                {
+                    Replacement1Four = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else if (Replacement2Four == "Место не занято.")
+                {
+                    Replacement2Four = $"TelegramUserName: {UserNameTelegram50}\n\rStandoffID: {IDStandoff50}";
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "Вы добавлены на замену в четвёртую игру.", option1);
+                }
+                else
+                {
+                    await PRTelegramBot.Helpers.Message.Send(botClient, update, "К сожелению мест на четвёртый матч нет .", option1);
+                }
+            }
+            else
+            {
+                await PRTelegramBot.Helpers.Message.Send(botClient, update, "Error registtration (Ошибка регистрации).", option1);
+            }
+            #endregion
+        }
+
+        [InlineCallbackHandler<PRHeadlers>(PRHeadlers.PlaySFour)]
+        public static async Task PlaySFour(ITelegramBotClient botClient, Update update)
+        {
+            var example3 = new InlineCallback("Меню", PRHeadlers.Example3);
+            var list = new List<IInlineContent>();
+            list.Add(example3);
+            var menuPrav = MenuGenerator.InlineKeyboard(1, list);
+            var option1 = new OptionMessage();
+            option1.MenuInlineKeyboardMarkup = menuPrav;
+            await PRTelegramBot.Helpers.Message.Send(botClient, update, $"{PlayList4}", option1);
+        }
+
+        #endregion
+
+        #endregion
+
+        #endregion
+        //Просмот расписания.
     }
 }
 #endregion

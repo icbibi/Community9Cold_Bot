@@ -22,15 +22,5 @@
     "C:\\Users\\Виндовс\\.nuget\\packages\\system.text.json\\9.0.7\\system.text.json.9.0.7.nupkg.sha512",
     "C:\\Users\\Виндовс\\.nuget\\packages\\telegram.bot\\22.6.0\\telegram.bot.22.6.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json.",
-      "projectPath": "C:\\Users\\Виндовс\\Desktop\\Community9Cold_Bot_\\Community9Cold_Bot_\\Community9Cold_Bot_.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\Виндовс\\Desktop\\Community9Cold_Bot_\\Community9Cold_Bot_\\Community9Cold_Bot_.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
