@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\\u0412\u0438\u043D\u0434\u043E\u0432\u0441\\Desktop\\Community9Cold_Bot_\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E0D431EB-BCA7-4864-BD0D-76BE6BE2CB33}|Community9Cold_Bot_\\Community9Cold_Bot_.csproj|c:\\users\\\u0432\u0438\u043D\u0434\u043E\u0432\u0441\\desktop\\community9cold_bot_\\community9cold_bot_\\middlewares\\twomiddlewareoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0D431EB-BCA7-4864-BD0D-76BE6BE2CB33}|Community9Cold_Bot_\\Community9Cold_Bot_.csproj|solutionrelative:community9cold_bot_\\middlewares\\twomiddlewareoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TwoMiddlewareOption.cs",
-              "DocumentMoniker": "C:\\Users\\\u0412\u0438\u043D\u0434\u043E\u0432\u0441\\Desktop\\Community9Cold_Bot_\\Community9Cold_Bot_\\Middlewares\\TwoMiddlewareOption.cs",
-              "RelativeDocumentMoniker": "Community9Cold_Bot_\\Middlewares\\TwoMiddlewareOption.cs",
-              "ToolTip": "C:\\Users\\\u0412\u0438\u043D\u0434\u043E\u0432\u0441\\Desktop\\Community9Cold_Bot_\\Community9Cold_Bot_\\Middlewares\\TwoMiddlewareOption.cs",
-              "RelativeToolTip": "Community9Cold_Bot_\\Middlewares\\TwoMiddlewareOption.cs",
-              "ViewState": "AgIAANcWAAAAAAAAAAAAAOMWAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T13:14:26.054Z",
-              "EditorCaption": ""
             }
           ]
         }
